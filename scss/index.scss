@@ -1,0 +1,95 @@
+@import "variables.scss";
+
+
+#urgent {
+  transition: 0.5s;
+  background: #900;
+  margin: 0;
+  padding: 10px;
+  & > div {
+    display: inline-block;
+    & > * {
+      margin: 0;
+    }
+  }
+  & > #close {
+    text-align: right;
+    float: right;
+    font-size: 1.5em;
+    opacity: 0.75;
+    &:hover {
+      opacity: 1;
+    }
+    & > button {
+      cursor: pointer;
+      background: none;
+      border: none;
+      color: #fff;
+    }
+  }
+}
+
+
+.container {
+  position: relative;
+  margin: 8vh 16vw;
+}
+
+
+.content {
+  text-align: center;
+  .page-list {
+    list-style: none;
+    text-align: center;
+    margin: 64px 16vw;
+    & > * {
+      color: $link-colour;
+    }
+    & > *:visited {
+      color: $link-visited-colour;
+    }
+    // add linebreaks to a tags within .page-list
+    & > *:after {
+      content: "\a";
+      white-space: pre;
+    }
+  }
+}
+
+
+.readme {
+  text-align: center;
+}
+
+
+footer {
+  border-top: 2px solid $primary-colour;
+  .footer-container {
+    // line
+    margin-top: 16px;
+
+    display: grid;
+    grid-template-areas: "a a a";
+    gap: 8px;
+    grid-auto-columns: auto;
+    .item {
+      cursor: pointer;
+      display: inline-block;
+      margin: auto;
+      text-align: center;
+      .lotus {
+        filter: invert(1);
+      }
+    }
+
+    .socials > * {
+      font-size: 2.5em;
+      opacity: 0.5;
+      padding: 0 8px;
+      transition: 0.3s;
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}

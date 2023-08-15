@@ -1,0 +1,104 @@
+@font-face {
+  font-family: Iosevka_Reg;
+  src: url("../assets/fonts/sgr-iosevka-regular.ttc");
+}
+@font-face {
+  font-family: Iosevka_Bold;
+  src: url("../assets/fonts/sgr-iosevka-bold.ttc");
+}
+@font-face {
+  font-family: Iosevka_Heavy;
+  src: url("../assets/fonts/sgr-iosevka-heavy.ttc");
+}
+@font-face {
+  font-family: Iosevka_Light;
+  src: url("../assets/fonts/sgr-iosevka-light.ttc");
+}
+@font-face {
+  font-family: Iosevka_Thin;
+  src: url("../assets/fonts/sgr-iosevka-thin.ttc");
+}
+#urgent {
+  transition: 0.5s;
+  background: #900;
+  margin: 0;
+  padding: 10px;
+}
+#urgent > div {
+  display: inline-block;
+}
+#urgent > div > * {
+  margin: 0;
+}
+#urgent > #close {
+  text-align: right;
+  float: right;
+  font-size: 1.5em;
+  opacity: 0.75;
+}
+#urgent > #close:hover {
+  opacity: 1;
+}
+#urgent > #close > button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: #fff;
+}
+
+.container {
+  position: relative;
+  margin: 8vh 16vw;
+}
+
+.content {
+  text-align: center;
+}
+.content .page-list {
+  list-style: none;
+  text-align: center;
+  margin: 64px 16vw;
+}
+.content .page-list > * {
+  color: #f3c6f2;
+}
+.content .page-list > *:visited {
+  color: #8d90e2;
+}
+.content .page-list > *:after {
+  content: "\a";
+  white-space: pre;
+}
+
+.readme {
+  text-align: center;
+}
+
+footer {
+  border-top: 2px solid #bb9ba5;
+}
+footer .footer-container {
+  margin-top: 16px;
+  display: grid;
+  grid-template-areas: "a a a";
+  gap: 8px;
+  grid-auto-columns: auto;
+}
+footer .footer-container .item {
+  cursor: pointer;
+  display: inline-block;
+  margin: auto;
+  text-align: center;
+}
+footer .footer-container .item .lotus {
+  filter: invert(1);
+}
+footer .footer-container .socials > * {
+  font-size: 2.5em;
+  opacity: 0.5;
+  padding: 0 8px;
+  transition: 0.3s;
+}
+footer .footer-container .socials > *:hover {
+  opacity: 1;
+}

@@ -1,0 +1,29 @@
+@import "variables.scss";
+
+html, body {
+  width: 100%;
+  // height: 100%;
+  margin: 0;
+  // user-select: none;
+  font: 100% $font-regular;
+  background: $bg-colour;
+  color: $secondary-colour;
+  text-decoration: none;
+
+  // leave commented during development.
+  // overflow: hidden;
+
+  h1, h2, h3, h4, h5, h6 {
+    font: $font-bold;
+    text-transform: uppercase;
+    margin: 8px;
+  }
+  h1 {
+    font-size: 3em;
+    color: $primary-colour;
+  }
+  p, li, a {
+    font: 80% $font-light;
+    color: $secondary-colour;
+  }
+}

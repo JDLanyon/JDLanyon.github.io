@@ -1,0 +1,41 @@
+@font-face {
+  font-family: Iosevka_Reg;
+  src: url("../assets/fonts/sgr-iosevka-regular.ttc");
+}
+@font-face {
+  font-family: Iosevka_Bold;
+  src: url("../assets/fonts/sgr-iosevka-bold.ttc");
+}
+@font-face {
+  font-family: Iosevka_Heavy;
+  src: url("../assets/fonts/sgr-iosevka-heavy.ttc");
+}
+@font-face {
+  font-family: Iosevka_Light;
+  src: url("../assets/fonts/sgr-iosevka-light.ttc");
+}
+@font-face {
+  font-family: Iosevka_Thin;
+  src: url("../assets/fonts/sgr-iosevka-thin.ttc");
+}
+html, body {
+  width: 100%;
+  margin: 0;
+  font: 100% Iosevka_Reg;
+  background: #111111;
+  color: #eeeeee;
+  text-decoration: none;
+}
+html h1, html h2, html h3, html h4, html h5, html h6, body h1, body h2, body h3, body h4, body h5, body h6 {
+  font: Iosevka_Bold;
+  text-transform: uppercase;
+  margin: 8px;
+}
+html h1, body h1 {
+  font-size: 3em;
+  color: #bb9ba5;
+}
+html p, html li, html a, body p, body li, body a {
+  font: 80% Iosevka_Light;
+  color: #eeeeee;
+}

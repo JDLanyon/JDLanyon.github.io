@@ -1,0 +1,33 @@
+@font-face {
+  font-family: Iosevka_Reg;
+  src: url("../assets/fonts/sgr-iosevka-regular.ttc");
+}
+@font-face {
+  font-family: Iosevka_Bold;
+  src: url("../assets/fonts/sgr-iosevka-bold.ttc");
+}
+@font-face {
+  font-family: Iosevka_Heavy;
+  src: url("../assets/fonts/sgr-iosevka-heavy.ttc");
+}
+@font-face {
+  font-family: Iosevka_Light;
+  src: url("../assets/fonts/sgr-iosevka-light.ttc");
+}
+@font-face {
+  font-family: Iosevka_Thin;
+  src: url("../assets/fonts/sgr-iosevka-thin.ttc");
+}
+
+$font-regular: Iosevka_Reg !default;
+$font-bold: Iosevka_Bold !default;
+$font-heavy: Iosevka_Heavy !default;
+$font-light: Iosevka_Light !default;
+$font-thin: Iosevka_Thin !default;
+
+$bg-colour: #111111 !default;
+$primary-colour: #bb9ba5 !default;
+$secondary-colour: #eeeeee !default;
+
+$link-colour: #f3c6f2 !default;
+$link-visited-colour: #8d90e2 !default;
