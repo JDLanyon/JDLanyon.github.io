@@ -48,12 +48,9 @@
 
 .container {
   position: relative;
-  margin: 8vh 16vw;
-}
-
-.content {
   text-align: center;
 }
+
 .content .page-list {
   list-style: none;
   text-align: center;
@@ -102,3 +99,5 @@ footer .footer-container .socials > * {
 footer .footer-container .socials > *:hover {
   opacity: 1;
 }
+
+/*# sourceMappingURL=index.css.map */
