@@ -1,0 +1,33 @@
+@import "variables.scss";
+
+nav {
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgba(238, 238, 238, 0.5);
+  }
+
+  li {
+    float: left;
+  }
+
+  li a {
+    font-family: $font-bold;
+    display: block;
+    color: $primary-colour;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    background-color: rgba(238, 238, 238, 0);
+  }
+
+  /* Change the link color to #111 (black) on hover */
+  li a:hover {
+    // background-color: #111;
+    background-color: rgba(238, 238, 238, 1);
+    color: $bg-colour;
+  }
+}
+

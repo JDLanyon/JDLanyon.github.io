@@ -1,0 +1,48 @@
+@font-face {
+  font-family: Iosevka_Reg;
+  src: url("../assets/fonts/sgr-iosevka-regular.ttc");
+}
+@font-face {
+  font-family: Iosevka_Bold;
+  src: url("../assets/fonts/sgr-iosevka-bold.ttc");
+}
+@font-face {
+  font-family: Iosevka_Heavy;
+  src: url("../assets/fonts/sgr-iosevka-heavy.ttc");
+}
+@font-face {
+  font-family: Iosevka_Light;
+  src: url("../assets/fonts/sgr-iosevka-light.ttc");
+}
+@font-face {
+  font-family: Iosevka_Thin;
+  src: url("../assets/fonts/sgr-iosevka-thin.ttc");
+}
+nav {
+  /* Change the link color to #111 (black) on hover */
+}
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgba(238, 238, 238, 0.5);
+}
+nav li {
+  float: left;
+}
+nav li a {
+  font-family: Iosevka_Bold;
+  display: block;
+  color: #bb9ba5;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  background-color: rgba(238, 238, 238, 0);
+}
+nav li a:hover {
+  background-color: rgb(238, 238, 238);
+  color: #111111;
+}
+
+/*# sourceMappingURL=nav.css.map */
