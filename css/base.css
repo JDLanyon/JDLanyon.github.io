@@ -40,4 +40,13 @@ html p, html li, html a, body p, body li, body a {
   color: #eeeeee;
 }
 
+.splash {
+  text-align: center;
+  margin: 0;
+}
+.splash * {
+  margin: 0;
+  padding: 10px 0;
+}
+
 /*# sourceMappingURL=base.css.map */

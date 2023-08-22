@@ -34,12 +34,29 @@ body {
   padding: 50px;
 }
 
-.hero {
-  text-align: center;
-  margin: 0;
+#card-university {
+  cursor: pointer;
 }
-.hero * {
-  margin: 0;
+#card-university .card-bg {
+  background-image: url("../assets/university_frame_1.png");
+}
+
+#card-university:hover .card-bg {
+  background-image: url("../assets/university.gif");
+}
+
+#card-about {
+  cursor: pointer;
+  height: 20vh;
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+#card-about .card-bg {
+  background-image: url("../assets/about_frame_1.png");
+}
+
+#card-about:hover .card-bg {
+  background-image: url("../assets/about.gif");
 }
 
 footer {
@@ -73,6 +90,11 @@ footer .footer-container .socials > *:hover {
 @media screen and (max-width: 640px) {
   body {
     background-image: url("/assets/Vertical_Pastel_Birds.jpg");
+  }
+  #card-about {
+    height: 15vh;
+    grid-column-start: 1;
+    grid-column-end: 1;
   }
 }
 

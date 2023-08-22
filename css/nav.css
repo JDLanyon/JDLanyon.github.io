@@ -33,6 +33,7 @@ nav li {
 }
 nav li a {
   font-family: Iosevka_Bold;
+  font-size: 1em;
   display: block;
   color: #bb9ba5;
   text-align: center;

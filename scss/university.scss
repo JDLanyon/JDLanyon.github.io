@@ -1,0 +1,35 @@
+@import "variables.scss";
+
+.container {
+  position: relative;
+  padding: 50px;
+}
+
+.cards {
+  // display: grid;
+  grid-template-columns: auto auto auto auto auto auto;
+  // gap: 50px;
+}
+
+.card {
+  grid-column: span 2;
+  height: 30vh;
+  position: relative;
+  text-align: center;
+}
+
+#IGB200 {
+
+}
+#IGB383 {
+
+}
+#CAB401 {
+
+}
+#CAB201 {
+  grid-column: span 3;
+}
+#CAB301 {
+  grid-column: span 3;
+}

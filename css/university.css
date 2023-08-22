@@ -1,0 +1,45 @@
+@font-face {
+  font-family: Iosevka_Reg;
+  src: url("../assets/fonts/sgr-iosevka-regular.ttc");
+}
+@font-face {
+  font-family: Iosevka_Bold;
+  src: url("../assets/fonts/sgr-iosevka-bold.ttc");
+}
+@font-face {
+  font-family: Iosevka_Heavy;
+  src: url("../assets/fonts/sgr-iosevka-heavy.ttc");
+}
+@font-face {
+  font-family: Iosevka_Light;
+  src: url("../assets/fonts/sgr-iosevka-light.ttc");
+}
+@font-face {
+  font-family: Iosevka_Thin;
+  src: url("../assets/fonts/sgr-iosevka-thin.ttc");
+}
+.container {
+  position: relative;
+  padding: 50px;
+}
+
+.cards {
+  grid-template-columns: auto auto auto auto auto auto;
+}
+
+.card {
+  grid-column: span 2;
+  height: 30vh;
+  position: relative;
+  text-align: center;
+}
+
+#CAB201 {
+  grid-column: span 3;
+}
+
+#CAB301 {
+  grid-column: span 3;
+}
+
+/*# sourceMappingURL=university.css.map */

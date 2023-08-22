@@ -27,3 +27,12 @@ html, body {
     color: $secondary-colour;
   }
 }
+
+.splash {
+  text-align: center;
+  margin: 0;
+  * {
+    margin: 0;
+    padding: 10px 0;
+  }
+}
