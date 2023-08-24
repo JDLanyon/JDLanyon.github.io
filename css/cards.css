@@ -20,7 +20,7 @@
 }
 .cards {
   justify-content: stretch;
-  margin: 4vw;
+  margin: 2vh 4vw;
   display: grid;
   grid-template-columns: auto auto auto;
   grid-auto-rows: auto auto;
@@ -55,7 +55,7 @@
 }
 
 .card {
-  height: 50vh;
+  height: 40vh;
   position: relative;
   text-align: center;
   cursor: pointer;
@@ -73,24 +73,6 @@
   filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.75));
   color: #eeeeee;
   opacity: 1;
-}
-
-@media screen and (max-width: 640px) {
-  .cards {
-    justify-content: stretch;
-    margin: 4vw;
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: auto auto auto auto;
-    gap: 30px;
-    position: relative;
-    user-select: none;
-  }
-  .card {
-    height: 15vh;
-    position: relative;
-    text-align: center;
-  }
 }
 
 /*# sourceMappingURL=cards.css.map */

@@ -1,0 +1,32 @@
+@font-face {
+  font-family: Iosevka_Reg;
+  src: url("../assets/fonts/sgr-iosevka-regular.ttc");
+}
+@font-face {
+  font-family: Iosevka_Bold;
+  src: url("../assets/fonts/sgr-iosevka-bold.ttc");
+}
+@font-face {
+  font-family: Iosevka_Heavy;
+  src: url("../assets/fonts/sgr-iosevka-heavy.ttc");
+}
+@font-face {
+  font-family: Iosevka_Light;
+  src: url("../assets/fonts/sgr-iosevka-light.ttc");
+}
+@font-face {
+  font-family: Iosevka_Thin;
+  src: url("../assets/fonts/sgr-iosevka-thin.ttc");
+}
+html, body {
+  height: 100%;
+  background: rgb(147, 198, 231);
+  background: linear-gradient(-30deg, #FFF3DA 0%, #DFCCFB 100%);
+}
+
+.container {
+  position: relative;
+  padding: 50px;
+}
+
+/*# sourceMappingURL=about.css.map */

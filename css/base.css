@@ -49,4 +49,38 @@ html p, html li, html a, body p, body li, body a {
   padding: 10px 0;
 }
 
+footer {
+  position: absolute;
+  bottom: -16vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-top: 2px solid #eeeeee;
+}
+footer .footer-container {
+  margin-top: 16px;
+  display: grid;
+  grid-template-areas: "a a a";
+  gap: 8px;
+  grid-auto-columns: auto;
+}
+footer .footer-container .item {
+  color: #eeeeee;
+  display: inline-block;
+  margin: auto;
+  text-align: center;
+}
+footer .footer-container .item .lotus {
+  filter: invert(1);
+}
+footer .footer-container .socials > * {
+  cursor: pointer;
+  font-size: 2em;
+  opacity: 0.5;
+  padding: 0 8px;
+  transition: 0.3s;
+}
+footer .footer-container .socials > *:hover {
+  opacity: 1;
+}
+
 /*# sourceMappingURL=base.css.map */

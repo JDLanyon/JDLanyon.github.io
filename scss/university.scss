@@ -1,13 +1,14 @@
 @import "variables.scss";
 
-body {
+html, body {
+  height: 100%;
   background: rgb(147,198,231);
   background: linear-gradient(-30deg, rgba(147,198,231,1) 0%, rgba(196,223,223,1) 100%);
+  // background-size: 100% 200%;
 }
 
 .container {
   position: relative;
-  padding: 50px;
 }
 
 .cards {

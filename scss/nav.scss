@@ -1,6 +1,11 @@
 @import "variables.scss";
 
 nav {
+  // overflow: hidden;
+  // position: fixed;
+  // top: 0;
+  // width: 100%;
+
   ul {
     list-style-type: none;
     margin: 0;
@@ -32,3 +37,6 @@ nav {
   }
 }
 
+@media screen and (max-width: 640px) {
+
+}
