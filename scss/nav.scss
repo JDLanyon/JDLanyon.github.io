@@ -6,10 +6,11 @@ nav {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: rgba(238, 238, 238, 0.5);
+    background-color: $opaque-light;
   }
 
   li {
+    width: 25%;
     float: left;
   }
 
@@ -17,18 +18,17 @@ nav {
     font-family: $font-bold;
     font-size: 1em;
     display: block;
-    color: $primary-colour;
+    color: $secondary-colour;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    background-color: rgba(238, 238, 238, 0);
   }
 
   /* Change the link color to #111 (black) on hover */
   li a:hover {
     // background-color: #111;
-    background-color: rgba(238, 238, 238, 1);
-    color: $bg-colour;
+    background-color: $light-colour;
+    color: $primary-colour;
   }
 }
 

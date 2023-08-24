@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "watch": true,
+    // "watch": true,
     "target": "es5",                                  /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
     "module": "commonjs",                                /* Specify what module code is generated. */
     "outDir": "./js",                                   /* Specify an output folder for all emitted files. */

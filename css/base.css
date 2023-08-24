@@ -22,9 +22,10 @@ html, body {
   width: 100%;
   margin: 0;
   font: 100% Iosevka_Reg;
-  background: #111111;
-  color: #eeeeee;
+  background: #bb9ba5;
+  color: #333333;
   text-decoration: none;
+  user-select: none;
 }
 html h1, html h2, html h3, html h4, html h5, html h6, body h1, body h2, body h3, body h4, body h5, body h6 {
   font: Iosevka_Bold;
@@ -33,11 +34,10 @@ html h1, html h2, html h3, html h4, html h5, html h6, body h1, body h2, body h3,
 }
 html h1, body h1 {
   font-size: 3em;
-  color: #bb9ba5;
+  color: #111111;
 }
 html p, html li, html a, body p, body li, body a {
   font: 80% Iosevka_Light;
-  color: #eeeeee;
 }
 
 .splash {

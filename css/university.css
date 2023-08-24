@@ -18,6 +18,11 @@
   font-family: Iosevka_Thin;
   src: url("../assets/fonts/sgr-iosevka-thin.ttc");
 }
+body {
+  background: rgb(147, 198, 231);
+  background: linear-gradient(-30deg, rgb(147, 198, 231) 0%, rgb(196, 223, 223) 100%);
+}
+
 .container {
   position: relative;
   padding: 50px;
@@ -34,12 +39,30 @@
   text-align: center;
 }
 
+#IGB200 .card-bg {
+  background-image: url("../assets/IGB200.png");
+}
+
+#IGB383 .card-bg {
+  background-image: url("../assets/IGB383.png");
+}
+
+#CAB401 .card-bg {
+  background-image: url("../assets/CAB401.png");
+}
+
 #CAB201 {
   grid-column: span 3;
+}
+#CAB201 .card-bg {
+  background-image: url("../assets/CAB201.png");
 }
 
 #CAB301 {
   grid-column: span 3;
+}
+#CAB301 .card-bg {
+  background-image: url("../assets/CAB301.png");
 }
 
 /*# sourceMappingURL=university.css.map */

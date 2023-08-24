@@ -1,5 +1,10 @@
 @import "variables.scss";
 
+body {
+  background: rgb(147,198,231);
+  background: linear-gradient(-30deg, rgba(147,198,231,1) 0%, rgba(196,223,223,1) 100%);
+}
+
 .container {
   position: relative;
   padding: 50px;
@@ -19,17 +24,29 @@
 }
 
 #IGB200 {
-
+  .card-bg {
+    background-image: url("../assets/IGB200.png");
+  }
 }
 #IGB383 {
-
+  .card-bg {
+    background-image: url("../assets/IGB383.png");
+  }
 }
 #CAB401 {
-
+  .card-bg {
+    background-image: url("../assets/CAB401.png");
+  }
 }
 #CAB201 {
+  .card-bg {
+    background-image: url("../assets/CAB201.png");
+  }
   grid-column: span 3;
 }
 #CAB301 {
+  .card-bg {
+    background-image: url("../assets/CAB301.png");
+  }
   grid-column: span 3;
 }

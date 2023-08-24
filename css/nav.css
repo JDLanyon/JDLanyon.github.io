@@ -29,20 +29,20 @@ nav ul {
   background-color: rgba(238, 238, 238, 0.5);
 }
 nav li {
+  width: 25%;
   float: left;
 }
 nav li a {
   font-family: Iosevka_Bold;
   font-size: 1em;
   display: block;
-  color: #bb9ba5;
+  color: #333333;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  background-color: rgba(238, 238, 238, 0);
 }
 nav li a:hover {
-  background-color: rgb(238, 238, 238);
+  background-color: #eeeeee;
   color: #111111;
 }
 

@@ -19,14 +19,15 @@
   src: url("../assets/fonts/sgr-iosevka-thin.ttc");
 }
 body {
-  user-select: none;
+  background: rgb(242, 190, 209);
+  background: linear-gradient(-30deg, rgb(242, 190, 209) 0%, rgb(249, 245, 246) 100%);
   width: 100%;
   height: 100%;
   margin: 0;
-  background-image: url("/assets/Pastel_Birds.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+}
+
+.splash {
+  color: #333333;
 }
 
 .container {
@@ -34,9 +35,14 @@ body {
   padding: 50px;
 }
 
-#card-university {
-  cursor: pointer;
+#card-motion-graphics {
+  cursor: initial;
 }
+
+#card-personal-projects {
+  cursor: initial;
+}
+
 #card-university .card-bg {
   background-image: url("../assets/university_frame_1.png");
 }
@@ -46,7 +52,6 @@ body {
 }
 
 #card-about {
-  cursor: pointer;
   height: 20vh;
   grid-column-start: 1;
   grid-column-end: 4;
@@ -60,7 +65,7 @@ body {
 }
 
 footer {
-  border-top: 2px solid #bb9ba5;
+  border-top: 2px solid #111111;
 }
 footer .footer-container {
   margin-top: 16px;

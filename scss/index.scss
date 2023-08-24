@@ -1,14 +1,19 @@
-@import "variables.scss";
+@import "_variables.scss";
 
 body {
-  user-select: none;
+  background: rgb(242,190,209);
+  background: linear-gradient(-30deg, rgba(242,190,209,1) 0%, rgba(249,245,246,1) 100%);
   width: 100%;
   height: 100%;
   margin:0;
-  background-image: url("/assets/Pastel_Birds.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  // background-image: url("/assets/Pastel_Birds.jpg");
+  // background-position: center;
+  // background-repeat: no-repeat;
+  // background-size: cover;
+}
+
+.splash {
+  color: $secondary-colour;
 }
 
 .container {
@@ -16,8 +21,15 @@ body {
   padding: 50px;
 }
 
+#card-motion-graphics {
+  cursor: initial;
+}
+
+#card-personal-projects {
+  cursor: initial;
+}
+
 #card-university {
-  cursor: pointer;
   .card-bg {
     background-image: url("../assets/university_frame_1.png");
   }
@@ -30,7 +42,6 @@ body {
 }
 
 #card-about {
-  cursor: pointer;
   .card-bg {
     background-image: url("../assets/about_frame_1.png");
   }

@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="../css/nav.css">
   <link rel="stylesheet" href="../css/cards.css">
   <link rel="stylesheet" href="../css/university.css">
+  <link rel="stylesheet" href="../css/modal.css">
+  <script src="../js/modals.js"></script>
   <title>JDLanyon | University</title>
 </head>
 <body>
@@ -24,38 +26,39 @@
   <div class="container">
 
     <div class="splash">
-      <h2>Blow are a few projects that I have worked on during my course at QUT.</h2>
+      <h2>Below are a few projects that I have worked on during my course at QUT.</h2>
     </div>
+
     <div class="cards">
-      <div class="card" id="IGB200">
+      <div class="card" id="IGB200" onclick="openModal('IGB200-modal')">
         <div class="card-fg">
           <h3>IGB200</h3>
           <p>This is currently under development and not available yet :(</p>
         </div>
         <div class="card-bg"></div>
       </div>
-      <div class="card" id="IGB383">
+      <div class="card" id="IGB383" onclick="openModal('IGB383-modal')">
         <div class="card-fg">
           <h3>IGB383</h3>
           <p>This is currently under development and not available yet :(</p>
         </div>
         <div class="card-bg"></div>
       </div>
-      <div class="card" id="CAB401">
+      <div class="card" id="CAB401" onclick="openModal('CAB401-modal')">
         <div class="card-fg">
           <h3>CAB401</h3>
           <p>This is currently under development and not available yet :(</p>
         </div>
         <div class="card-bg"></div>
       </div>
-      <div class="card" id="CAB201">
+      <div class="card" id="CAB201" onclick="openModal('CAB201-modal')">
         <div class="card-fg">
           <h3>CAB201</h3>
           <p>This is currently under development and not available yet :(</p>
         </div>
         <div class="card-bg"></div>
       </div>
-      <div class="card" id="CAB301">
+      <div class="card" id="CAB301" onclick="openModal('CAB301-modal')">
         <div class="card-fg">
           <h3>CAB301</h3>
           <p>This is currently under development and not available yet :(</p>
@@ -64,6 +67,58 @@
       </div>
     </div>
   </div>
+
+  <!-- MODALS -->
+
+  <div class="modal" id="IGB200-modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeAllModals()">&times;</span>
+
+      <h1>IGB200</h1>
+
+      <p>Some text in the Modal..</p>
+    </div>
+  </div>
+
+  <div class="modal" id="IGB383-modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeAllModals()">&times;</span>
+  
+      <h1>IGB383</h1>
+  
+      <p>Some text in the Modal..</p>
+    </div>
+  </div>
+
+<div class="modal" id="CAB401-modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeAllModals()">&times;</span>
+
+    <h1>CAB401</h1>
+
+    <p>Some text in the Modal..</p>
+  </div>
+</div>
+
+<div class="modal" id="CAB201-modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeAllModals()">&times;</span>
+
+    <h1>CAB201</h1>
+
+    <p>Some text in the Modal..</p>
+  </div>
+</div>
+
+<div class="modal" id="CAB301-modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeAllModals()">&times;</span>
+
+    <h1>CAB301</h1>
+
+    <p>Some text in the Modal..</p>
+  </div>
+</div>
 
 </body>
 </html>

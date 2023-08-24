@@ -25,9 +25,11 @@ $font-heavy: Iosevka_Heavy !default;
 $font-light: Iosevka_Light !default;
 $font-thin: Iosevka_Thin !default;
 
-$bg-colour: #111111 !default;
-$primary-colour: #bb9ba5 !default;
-$secondary-colour: #eeeeee !default;
+$bg-colour: #bb9ba5 !default;
+$primary-colour: #111111 !default;
+$secondary-colour: #333333 !default;
+$light-colour: #eeeeee !default;
+$opaque-light: rgba(238, 238, 238, 0.5) !default;
 
 $link-colour: #f3c6f2 !default;
 $link-visited-colour: #8d90e2 !default;
