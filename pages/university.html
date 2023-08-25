@@ -33,35 +33,35 @@
       <div class="card" id="IGB200" onclick="openModal('IGB200-modal')">
         <div class="card-fg">
           <h3>IGB200</h3>
-          <p>This is currently under development and not available yet :(</p>
+          <p>Rafted - A top down island escape game</p>
         </div>
         <div class="card-bg"></div>
       </div>
       <div class="card" id="IGB383" onclick="openModal('IGB383-modal')">
         <div class="card-fg">
           <h3>IGB383</h3>
-          <p>This is currently under development and not available yet :(</p>
+          <p>Adding path finding algorithms to incomplete projects</p>
         </div>
         <div class="card-bg"></div>
       </div>
       <div class="card" id="CAB401" onclick="openModal('CAB401-modal')">
         <div class="card-fg">
           <h3>CAB401</h3>
-          <p>This is currently under development and not available yet :(</p>
+          <p>Perfomance analysis and improvements</p>
         </div>
         <div class="card-bg"></div>
       </div>
       <div class="card" id="CAB201" onclick="openModal('CAB201-modal')">
         <div class="card-fg">
           <h3>CAB201</h3>
-          <p>This is currently under development and not available yet :(</p>
+          <p>A simple command line application for a car company</p>
         </div>
         <div class="card-bg"></div>
       </div>
       <div class="card" id="CAB301" onclick="openModal('CAB301-modal')">
         <div class="card-fg">
           <h3>CAB301</h3>
-          <p>This is currently under development and not available yet :(</p>
+          <p>Another CLI but uses a binary tree and bubble sort</p>
         </div>
         <div class="card-bg"></div>
       </div>
@@ -76,7 +76,37 @@
 
       <h1>IGB200</h1>
 
-      <p>Some text in the Modal..</p>
+      <h3>Overview</h3>
+      <p>A game was to be made in a group of 4 that followed the theme of QUT Open day.</p>
+      <p>Our group had chose to do an island based survival game where the character would build skills relating to QUT in order to escape the island and make QUT O'Week in time.</p>
+      <p>The execution of this was poorly done and to be honest did not reflect the initial scope of the project well,
+        however the game itself was functional and showed unique gameplay over others, most notably being a tile-based game.</p>
+
+      <h3>What was learnt</h3>
+
+      <h3>Development of the project</h3>
+      <p>In early development, a unity preset was loaded and a character was added. The only real functionality was the ability to walk and collect sticks from trees.</p>
+      <img src="../assets/IGB200/2023-08-25 17_10_22-Rafted.png" alt="" style="width: 49%;">
+      <img src="../assets/IGB200/2023-08-25 17_11_23-Rafted.png" alt="" style="width: 49%;">
+      <p>Eventually textures were added along with the ability to collect multiple items. A title screen was finally created and cleaner UI was added after.</p>
+      <img src="../assets/IGB200/2023-08-25 17_12_30-Rafted.png" alt="">
+      <img src="../assets/IGB200/2023-08-25 17_13_27-Rafted.png" alt="">
+      <img src="../assets/IGB200/2023-08-25 17_13_41-Rafted.png" alt="">
+      <p>A campfire along with several assets were created by me to make the environment more engaging.</p>
+      <img src="../assets/IGB200/Campfire.gif" alt="">
+      <img src="../assets/IGB200/Stones.png" alt="">
+      <img src="../assets/IGB200/Trees.png" alt="">
+      <p>My favourite contribution is the dynamic tiles where each water tile would connect and be animated along with the tiling nature of everything else.</p>
+      <img src="../assets/IGB200/Water.png" alt="">
+      <img src="../assets/IGB200/Beach.gif" alt="">
+      <img src="../assets/IGB200/GroundTiles.png" alt="">
+
+      <h3>Possible Improvements</h3>
+      <p>The character asset was made by another member and felt out of place from the rest of the assets.</p>
+      <p>One of the biggest issues was I was responsible for almost all asset creation and a lot of the core gameplay mechanics.
+        If I had the option to chose one I would have stuck with asset creation to make the game look and feel as smooth as possible.</p>
+      <p>A game like this with tweaks made to remove the initial theme of O'Week has high potential, and could be worked on or even rewritten in future.</p>
+
     </div>
   </div>
 
@@ -85,8 +115,46 @@
       <span class="close" onclick="closeAllModals()">&times;</span>
   
       <h1>IGB383</h1>
-  
-      <p>Some text in the Modal..</p>
+
+      <h3>Overview</h3>
+      <p>IGB383 consisted of 3 incomplete projects and each project had to be improved using navigation algorithms.</p>
+      <p>The first project was a pacman-like game with nodes for the enemies to follow.</p>
+      <p>The second was a space fighting game where both the missiles and the drones had to do a series of movements depending on various values.</p>
+      <p>A competitive bot was the last assignment, however I did not engage in this project.</p>
+
+      <h3>What was learnt</h3>
+      <p>Path navigation using A* pathfinding and what is denoted as a greedy search, where the largest node is taken without any other consideration.</p>
+      <p>A comparison between the two was written along with finite state diagrams.</p>
+      <p>The second project covered a "Bee's Algorithm" which is an algorithm to simulate flying agents as if they were a colony.</p>
+      <p>Other niche topics such as Boid behaviour, models on heuristic integer values and such were also learnt.</p>
+
+      <h3>Development of the project</h3>
+      <p>The first project was quite simple, first boundaries for the enemies were added where enemies would either attack or hide from the player.</p>
+      <p>then each node was connected, which would serve as the navigation for each enemy. values are weighted based on either the A* or greedy algorithm to get to the player.</p>
+      <img src="../assets/IGB383/Enemy Triggers.png" alt="">
+      <img src="../assets/IGB383/Place Markers.png" alt="">
+
+      <p>The second project involved first adding an idle behaviour, followed by a scouting behaviour and a foraging behavour.</p>
+      <p>Each of these behaviours are for the drones to collect resources for the mothership.</p>
+      <img src="../assets/IGB383/Idle Drones.png" alt="" style="width: 20%;">
+      <img src="../assets/IGB383/Scout.png" alt="">
+      <img src="../assets/IGB383/Forage.png" alt="">
+
+      <p>Following those behaviours, an interception stage was added, where the player would be attached when too close to the mothership.</p>
+      <img src="../assets/IGB383/Interception.png" alt="" style="width: 49%;">
+
+      <p>We were tasked with adding our own additions, in which I just adjusted the laser spawn position, added fuel and a healing mechanic, where fuel and health values increased when idle.</p>
+      <p>Oh and I also added a maximum load or capacity for what the drones collected at the asteroids.</p>
+
+      <img src="../assets/IGB383/Original Laser Spawn Position.png" alt="">
+      <img src="../assets/IGB383/New Laser Position.png" alt="" style="width: 39%;">
+
+
+      <h3>Possible Improvements</h3>
+      <p>If I were to work on this project now, I would likely scrap the base project entirely as my biggest issues was with the assets used.</p>
+      <p>The base project felt over detailed and clunky, whereas a minimal pacman clone and a minimal wasp or bee fighting game for the second would
+        demonstrate the same algorithms while being more pleasurable to actually play.</p>
+
     </div>
   </div>
 
@@ -96,7 +164,34 @@
 
       <h1>CAB401</h1>
 
-      <p>Some text in the Modal..</p>
+      <h3>Overview</h3>
+      <p>A project of our choice was to be analysed for its performance and parallelized where possible; I chose Sebastian Lague's Marching Cubes project.</p>
+      <p>He has an entertaining video explaining the process he undertook and his view on the project.</p>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/M3iI2l0ltbE?si=ktW22FWP0nBXSjzh"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+      <h3>What was learnt</h3>
+      <p>Several perfomance analysis techniques were learnt. This was also my introduction into profiling.</p>
+      <p>A large problem I had was that the project was already extremely well performed,
+        the proper use of compute shaders was implemented and it already had parallel processes implemented.</p>
+      <p>Chunk generation for performance increases along with the proper implementation of this system was also learnt.</p>
+
+      <h3>Development of the project</h3>
+      <p>A large portion of this assessment item is in the report itself, where a breakdown of the original project was made followed by a performance increase.</p>
+      <p>I had not done perfomance increases for this project but I did analyse the original and document it's algorithms, components and details.</p>
+      <p>I removed the chunk generation to push performance and see what chunk generation distance could theoretically be achieved.</p>
+      <img src="../assets/CAB401/large area.png" alt="">
+      <img src="../assets/CAB401/16^3 chunks.png" alt="">
+
+      <p>A UML diagram was established detailing the classes used and a detailed technical report was written showing time efficiency graphs and profiles for various chunk generations.</p>
+      <img src="../assets/CAB401/UML Diagram.png" alt="" style="width: 49%;">
+      <img src="../assets/CAB401/time graph.png" alt="" style="width: 49%;">
+
+      <h3>Possible Improvements</h3>
+      <p>I believe this project could genuinely have been improved, but perhaps not through further parallelization.</p>
+      <p>One example of this is rewriting the project to be of a smaller scope and removing existing features that aren't necessary (such as the terrain gradient).</p>
+      <p>Overall, I should have done a short analysis on the existing project beforehand to ensure that there is reasonable room for perfomance improvements.</p>
     </div>
   </div>
 
@@ -106,7 +201,31 @@
 
       <h1>CAB201</h1>
 
-      <p>Some text in the Modal..</p>
+      <h3>Overview</h3>
+      <p>A CLI (command line interface) was to be written that would interract with three csv files.</p>
+      <p>The program was intended to work as an entry system for a car company, where the user could enter a new customer, rent a car to a customer, add, edit and remove vehicles, customer data, etc.</p>
+
+      <h3>What was learnt</h3>
+      <p>I did this project quite early on in my degree, so I wasn't particularly familar with the idea of a looping project - moreso building one that remains functional.</p>
+      <p>Other than that, this project felt quite trivial.</p>
+
+      <h3>Development of the project</h3>
+      <p>Each task was implemented in order after a basic input loop method, which would just be a prompt that returned values.</p>
+
+      <img src="../assets/CAB201/tasks.png" alt="">
+      <img src="../assets/CAB201/InputLoop.png" alt="">
+      
+      <p>Class diagrams were written for the report along with a transcript.</p>
+
+      <img src="../assets/CAB201/Class Diagrams.png" alt="" style="width: 49%;">
+
+      <h3>Possible Improvements</h3>
+      <p>There are several improvements that could be done, the main one which I would prefer is a nicer UI.
+        CLIs have come a long way and these menus can be much nicer to print.</p>
+      <p>I will mention that the terminal clearing and entering values was extremely nice to do, and all criterias for this assessment were met.</p>
+          <img src="../assets/CAB201/table transcript.png" alt="">
+      <p>(The above is a snippet from the transcript, no text has been cleared)</p>
+      
     </div>
   </div>
 
@@ -116,7 +235,27 @@
 
       <h1>CAB301</h1>
 
-      <p>Some text in the Modal..</p>
+      <h3>Overview</h3>
+      <p>CAB301 was (in my opinion) a more advanced version of CAB201, in that a sorting algorithm was to be implemented along with a binary tree.</p>
+
+      <h3>What was learnt</h3>
+      <p>Binary trees and the difference between a few sorting algorithms (bubble sort, merge sort, etc)</p>
+
+      <h3>Development of the project</h3>
+      <p>The main component of this project was the sorting algorithm used. I had chose bubble sort because it's fun, simple and effective.
+        For such a use case like the one provided, a fast algorithm wasn't needed</p>
+      <img src="../assets/CAB301/bubblesort.png" alt="">
+      <p>We were given interfaces, of which were not straight forward and we were told later into the semester to ignore them.</p>
+      <p>Outside of that, the only real error I had made was not properly using the Tool Library System as intended and not splitting my code between classes properly.</p>
+      <p>The main differences from CAB201 was that I did not do an input loop, but had it integrated in the main loop, where each option would run a different method.</p>
+      <img src="../assets/CAB301/Main Loop.png" alt="">
+      <p>This project also gave me a sneak peak into what CAB401 would be about, where an empirical analysis was done showing the O notation efficiency of the sorting algorithm used. (O(n^2))</p>
+      <p>Oh I should mention the sorting algorithm was just to sort tables alphabetically or by value before printing (depending on user preference)</p>
+      <img src="../assets/CAB301/empirical analysis.png" alt="">
+
+      <h3>Possible Improvements</h3>
+      <p>Similarly to CAB201, a more colourful CLI would have helped.</p>
+      <p>If it were allowed I would have also used a library for prettier table printing since these tables were occasionally larger than the window.</p>
     </div>
   </div>
 

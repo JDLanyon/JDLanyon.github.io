@@ -5,6 +5,7 @@ html, body {
   background: rgb(147,198,231);
   background: linear-gradient(-30deg, rgba(147,198,231,1) 0%, rgba(196,223,223,1) 100%);
   // background-size: 100% 200%;
+  background-attachment: fixed;
 }
 
 .container {
@@ -25,6 +26,7 @@ html, body {
 }
 
 #IGB200 {
+  display: block;
   .card-bg {
     background-image: url("../assets/IGB200.png");
   }

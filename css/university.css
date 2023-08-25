@@ -22,6 +22,7 @@ html, body {
   height: 100%;
   background: rgb(147, 198, 231);
   background: linear-gradient(-30deg, rgb(147, 198, 231) 0%, rgb(196, 223, 223) 100%);
+  background-attachment: fixed;
 }
 
 .container {
@@ -39,6 +40,9 @@ html, body {
   text-align: center;
 }
 
+#IGB200 {
+  display: block;
+}
 #IGB200 .card-bg {
   background-image: url("../assets/IGB200.png");
 }

@@ -22,11 +22,34 @@ html, body {
   height: 100%;
   background: rgb(147, 198, 231);
   background: linear-gradient(-30deg, #FFF3DA 0%, #DFCCFB 100%);
+  background-attachment: fixed;
 }
 
 .container {
   position: relative;
   padding: 50px;
+}
+
+.grid {
+  margin: 0 10%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 20px;
+}
+.grid .item {
+  width: 100%;
+}
+.grid .item img {
+  width: 75%;
+  max-width: 300px;
+  border-radius: 8px;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+}
+.grid .item #image-1 {
+  float: right;
+}
+.grid .item #image-2 {
+  float: left;
 }
 
 /*# sourceMappingURL=about.css.map */

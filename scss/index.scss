@@ -9,7 +9,7 @@ html, body {
   // background-image: url("/assets/Pastel_Birds.jpg");
   // background-position: center;
   // background-repeat: no-repeat;
-  background-size: 100% 200%;
+  background-attachment: fixed;
 }
 
 .splash {
@@ -54,6 +54,12 @@ html, body {
   .card-bg {
     background-image: url("../assets/about.gif");
   }
+}
+
+
+#resume {
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 // .content {
