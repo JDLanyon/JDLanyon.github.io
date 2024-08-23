@@ -1,0 +1,18 @@
+{
+  "/_error": "pages/_error.js",
+  "/_document": "pages/_document.js",
+  "/404": "pages/404.html",
+  "/500": "pages/500.html",
+  "/Projects/CAB201": "pages/Projects/CAB201.html",
+  "/Projects/CAB301": "pages/Projects/CAB301.html",
+  "/Projects/CAB401": "pages/Projects/CAB401.html",
+  "/Projects/IFB399": "pages/Projects/IFB399.html",
+  "/Projects/IGB200": "pages/Projects/IGB200.html",
+  "/Projects/IGB383": "pages/Projects/IGB383.html",
+  "/Projects/IGB388": "pages/Projects/IGB388.html",
+  "/_app": "pages/_app.js",
+  "/": "pages/index.html",
+  "/overview": "pages/overview.html",
+  "/contact": "pages/contact.html",
+  "/projects": "pages/projects.html"
+}
