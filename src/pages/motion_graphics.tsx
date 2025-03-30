@@ -1,13 +1,13 @@
 import Image from "next/image";
-import Hero from "./components/hero";
-import Footer from "./components/footer";
-import {Button} from "./components/elements";
+import Hero from "../app/components/hero";
+import Footer from "../app/components/footer";
+import {Button} from "../app/components/elements";
 
-export default function Home() {
+export default function MotionGraphics() {
   return (
     <div className="grid items-center justify-items-center min-h-screen p-8 gap-16">
       <main className="flex flex-col gap-8 row-start-2 items-center text-center">
-        <Hero />
+        <h1>motinng</h1>
 
         <div className="pt-16 flex gap-4 items-center flex-col md:flex-row">
           <Button text="About" href="/about"/>

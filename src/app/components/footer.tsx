@@ -1,9 +1,11 @@
 import Image from "next/image";
 import "../globals.css";
+import {FooterElement} from "./elements";
 
 export default function Footer() {
   return (
     <footer className="flex gap-8 flex-wrap items-center justify-center">
+      <FooterElement text="socials 1" />
     <a
       className="flex items-center gap-2 hover:underline hover:underline-offset-4"
       href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
