@@ -2,20 +2,22 @@
 
 
 :root {
+  --primary: #eee;
+  --secondary: #ccc;
   --background: #111;
-  --foreground: #eee;
 }
 
 @media (prefers-color-scheme: light) {
   :root {
+    --primary: #111;
+    --secondary: #333;
     --background: #eee;
-    --foreground: #111;
   }
 }
 
 body {
   background: var(--background);
-  color: var(--foreground);
+  color: var(--primary);
   font-family: var(--font-overpass-mono);
 }
 

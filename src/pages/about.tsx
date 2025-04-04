@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Hero from "../app/components/hero";
 import Footer from "../app/components/footer";
-import {Button} from "../app/components/elements";
+import {Button} from "../app/components/button";
 
 export default function About() {
   return (

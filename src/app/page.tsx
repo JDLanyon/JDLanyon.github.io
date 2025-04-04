@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Hero from "./components/hero";
 import Footer from "./components/footer";
-import {Button} from "./components/elements";
+import Button from "./components/button";
 
 export default function Home() {
   return (
@@ -13,16 +13,6 @@ export default function Home() {
           <Button text="About" href="/about"/>
           <Button text="Programming" href="/programming"/>
           <Button text="Motion Graphics" href="/motion_graphics"/>
-
-        {/* <a
-            className="sm:font-size:0.5em rounded-full border border-solid border-white light:border-black flex items-center justify-center hover:bg-[#222] light:hover:bg-[#ddd] hover:border-transparent h-12 px-8"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            suck a cock
-          </a> */}
-
 
         </div>
       </main>
