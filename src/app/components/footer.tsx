@@ -5,7 +5,7 @@ import { SiGithub, SiInstagram, SiYoutube } from '@icons-pack/react-simple-icons
 
 export default function Footer() {
   return (
-    <footer className="flex gap-8 flex-wrap items-center justify-center">
+    <footer className="pb-8 pt-8 w-screen mx-auto flex gap-8 flex-wrap items-center justify-center fixed bottom-0">
       {/* Github */}
       <a
         className="flex items-center gap-2 hover:underline hover:underline-offset-4 text-[var(--secondary)]"
