@@ -6,7 +6,7 @@ import { Menu } from 'lucide-react';
 
 export default function Nav() {
   return (
-    <nav className="grid grid-cols-7 w-screen gap-8 items-center justify-center text-center fixed top-0">
+    <nav className="z-10 grid grid-cols-7 w-screen gap-8 items-center justify-center text-center fixed top-0">
       {/* left side */}
       <div className="col-start-2 col-span-2 mx-auto gap-16 hidden md:relative md:flex">
         <a
@@ -30,8 +30,8 @@ export default function Nav() {
         <Image
           className="dark:invert"
           src="/lotus.svg"
-          width={60}
-          height={60}
+          width={64}
+          height={64}
           alt="lotus"
         />
       </a>

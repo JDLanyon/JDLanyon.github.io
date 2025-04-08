@@ -18,7 +18,7 @@ export default function Button({text, href = "#"} : ButtonProps) {
     <div className="transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none">
       <a
       // onClick={() => router.push(`${href}`)}
-      className="gap-4 border border-solid border-white light:border-black flex items-center justify-center hover:bg-[#ddd] light:hover:bg-[#222] hover:border-transparent hover:text-[#111] light:hover:text-[#eee] h-16 px-4"
+      className="gap-4 flex items-center justify-center h-16 px-4 hover:bg-[#ddd] light:hover:bg-[#222] hover:text-[#111] light:hover:text-[#eee]"
       href={href}
       // target="_blank"
       rel="noopener noreferrer"
