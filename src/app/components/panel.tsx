@@ -4,36 +4,38 @@ import "../globals.css";
 import Image from "next/image";
 
 interface PanelProps {
-    thumbnail?: string;
-    title?: string;
-    description?: string;
-  }
-
-function Thumbnail({tn} : {tn? : string}) {
-  if (tn) {
-    return <Image
-    className="mx-auto w-full rounded-lg hover:rounded-none"
-    src={tn}
-    // layout="contain"
-    width={1000}
-    height={1000}
-    // sizes="100vw"
-    // style={{ width: '100%', height: 'auto' }} // optional
-    alt="panel thumbnail"
-  />;
-  }
-  return;
+  thumbnail?: string;
+  title?: string;
+  description?: string;
+  allowhover?: boolean;
 }
 
-export default function Panel({thumbnail, title, description} : PanelProps) {
+// Conditional image
+function Thumbnail({thumbnail} : PanelProps) {
+  if (thumbnail) {
+    return <Image
+      className="mx-auto w-full"
+      src={thumbnail}
+      // layout="contain"
+      width={1000}
+      height={1000}
+      // sizes="100vw"
+      // style={{ width: '100%', height: 'auto' }} // optional
+      alt="panel thumbnail"
+    />;
+  }
+}
+
+export default function Panel({thumbnail, title, description, allowhover = true} : PanelProps) {
   return (
-    <div className="w-[100%] h-250 transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none">
+    <div className={`grid w-[100%] h-[100%] transition transform ${allowhover ? 'hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none hover:bg-[#ddd] light:hover:bg-[#222] hover:text-[#111] light:hover:text-[#eee]' : ''}`}>
       {/* TODO: pointer cursor and trigger modal */}
-      <div className="grid text-center hover:bg-[#ddd] light:hover:bg-[#222] hover:text-[#111] light:hover:text-[#eee]">
-        <Thumbnail tn={thumbnail} />
+      <div className={thumbnail ? "grid text-center" : "grid my-auto text-center"}>
+        <Thumbnail thumbnail={thumbnail} />
         <h2 className="py-2">{title}</h2>
         <p className="pb-4">{description}</p>
       </div>
     </div>
-  )
+
+  );
 }
