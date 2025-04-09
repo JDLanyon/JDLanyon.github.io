@@ -5,11 +5,12 @@ import Panel from "../components/panel";
 
 export default function About() {
   return (
-    <div>
+    <div className="h-max">
       <Nav />
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-32 my-12 items-center justify-items-center p-8 gap-16">
+      <div className="columns-1 md:columns-2 lg:columns-3 mx-32 my-12 items-center justify-items-center p-8 gap-16">
 
         <Panel title="test" thumbnail="/Liverpool.jpg" />
+        <Panel title="test" thumbnail="/Liverpool.jpg" description="penis music"/>
         <Panel title="test" thumbnail="/Liverpool.jpg" description="penis music"/>
         <Panel title="test" description="even more penis music"/>
         <Panel title="test" description="even more penis music"/>
