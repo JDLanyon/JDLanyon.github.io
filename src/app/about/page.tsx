@@ -2,6 +2,8 @@ import Image from "next/image";
 import Footer from "../components/footer";
 import Nav from "../components/nav";
 import Panel from "../components/panel";
+import Link from 'next/link'
+
 
 export default function About() {
   return (
@@ -14,9 +16,12 @@ export default function About() {
         <Panel title="test" thumbnail="/Liverpool.jpg" description="penis music"/>
         <Panel title="test" description="even more penis music"/>
         <Panel title="test" description="even more penis music"/>
+        <Panel title="test" description="even more penis music"/>
+        <Panel title="test" description="even more penis music"/>
+        <Panel title="test" description="even more penis music"/>
         <Panel title="test" thumbnail="/Liverpool.jpg" />
         <Panel title="test" thumbnail="/Liverpool.jpg" />
-
+        <Link href="/">Open modal</Link>
       </div>
 
       <Footer />

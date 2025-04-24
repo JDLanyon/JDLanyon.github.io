@@ -3,26 +3,34 @@
 import "../globals.css";
 import Image from "next/image";
 import { Menu } from 'lucide-react';
+import { usePathname } from 'next/navigation'
+
+function NavButton({text, href} : {text : string, href : string}) {
+  if (href == usePathname()) {
+    return (<a
+    className="flex items-center text-[var(--primary)] font-bold"
+    rel="noopener noreferrer"
+  >
+    {text}
+  </a>);
+  } {
+    return (<a
+    className="flex items-center hover:underline hover:underline-offset-4 text-[var(--secondary)]"
+    href={href}
+    rel="noopener noreferrer"
+  >
+    {text}
+  </a>);
+  }
+}
 
 export default function Nav() {
   return (
     <nav className="z-10 grid grid-cols-7 w-screen gap-8 items-center justify-center text-center fixed top-0">
       {/* left side */}
       <div className="col-start-2 col-span-2 mx-auto gap-16 hidden md:relative md:flex">
-        <a
-          className="flex items-center hover:underline hover:underline-offset-4 text-[var(--secondary)]"
-          href="/"
-          rel="noopener noreferrer"
-        >
-          Home
-        </a>
-        <a
-          className="flex items-center hover:underline hover:underline-offset-4 text-[var(--secondary)]"
-          href="/about"
-          rel="noopener noreferrer"
-        >
-          About
-        </a>
+        <NavButton text="Home" href="/" />
+        <NavButton text="About" href="/about" />
       </div>
 
       {/* Lotus */}
@@ -38,16 +46,9 @@ export default function Nav() {
 
       {/* right side */}
       <div className="col-start-5 col-span-2 mx-auto gap-16 hidden md:relative md:flex">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4 text-[var(--secondary)]"
-          href="/"
-          rel="noopener noreferrer"
-        >Programming</a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4 text-[var(--secondary)]"
-          href="/"
-          rel="noopener noreferrer"
-        >Motion Graphics</a>
+      <NavButton text="Programming" href="/programming" />
+      <NavButton text="Motion Graphics" href="/motion_graphics" />
+
       </div>
       
 
