@@ -7,10 +7,13 @@ import Link from 'next/link'
 
 export default function About() {
   return (
-    <div className="h-max">
+    <section className="h-max">
       <Nav />
       <div className="columns-1 md:columns-2 lg:columns-3 mx-32 my-12 items-center justify-items-center p-8 gap-16">
 
+        <Link href={`/projects/${0}`} passHref>
+            <p>open modal</p>
+        </Link>
         <Panel title="test" thumbnail="/Liverpool.jpg" />
         <Panel title="test" thumbnail="/Liverpool.jpg" description="penis music"/>
         <Panel title="test" thumbnail="/Liverpool.jpg" description="penis music"/>
@@ -25,6 +28,6 @@ export default function About() {
       </div>
 
       <Footer />
-    </div>
+    </section>
   );
 }
