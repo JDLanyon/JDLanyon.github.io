@@ -1,12 +1,15 @@
-import { Modal } from './modal'
+import Image from "next/image";
+
+import { Modal } from '../modal'
 
 
-// TODO: Props
+// TODO: dynamically fetch existing information
 export default async function Project() {
   return (
     <Modal>
       <div>
-        <h1>hi</h1>
+        <h1>Whoops</h1>
+        <p>looks like I haven't put any info on this one yet :c</p>
       </div>
     </Modal>
   )
