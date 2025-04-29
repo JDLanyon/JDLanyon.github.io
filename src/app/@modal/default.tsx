@@ -1,8 +1,8 @@
-'use client'
+import { Menu } from 'lucide-react';
+import Image from "next/image";
 
 import "../globals.css";
-import Image from "next/image";
-import { Menu } from 'lucide-react';
+
 
 export default function Default() {
   return null

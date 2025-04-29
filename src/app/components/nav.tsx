@@ -1,9 +1,11 @@
 'use client'
 
-import "../globals.css";
 import Image from "next/image";
+
+import "../globals.css";
 import { Menu } from 'lucide-react';
 import { usePathname } from 'next/navigation'
+
 
 function NavButton({text, href} : {text : string, href : string}) {
   if (href == usePathname()) {

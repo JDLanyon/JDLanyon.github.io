@@ -2,6 +2,9 @@
 
 import { useRouter } from 'next/navigation';
 
+import Button from '@/app/components/button';
+
+
 export function Modal({ children }: { children: React.ReactNode }) {
   const router = useRouter();
 
@@ -10,9 +13,12 @@ export function Modal({ children }: { children: React.ReactNode }) {
   }
 
   return (
-    <div className="modal-backdrop">
+    <div className="absolute inset-0 flex m-16 transition-all z-100 p-8 bg-black/50 border-solid border-white border-1">
         {children}
-        <button onClick={close} className="h-48 w-48 cursor-pointer" />
+        <div className="absolute top-2 right-2 transform z-101">
+          <Button onclick={close} text="x" />
+
+        </div>
     </div>
   );
 }

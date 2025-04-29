@@ -1,6 +1,7 @@
-import Hero from "./components/hero";
-import Footer from "./components/footer";
 import Button from "./components/button";
+import Footer from "./components/footer";
+import Hero from "./components/hero";
+
 
 export default function Home() {
   return (

@@ -1,13 +1,12 @@
-'use client'
-
-import "../globals.css";
 import Image from "next/image";
 
+import "../globals.css";
+
+
 interface PanelProps {
-  thumbnail?: string;
   title?: string;
+  thumbnail?: string;
   description?: string;
-  allowhover?: boolean;
 }
 
 // Conditional image
@@ -26,9 +25,9 @@ function Thumbnail({thumbnail} : PanelProps) {
   }
 }
 
-export default function Panel({thumbnail, title, description, allowhover = true} : PanelProps) {
+export default function Panel({thumbnail, title, description} : PanelProps) {
   return (
-    <div className={`break-inside-avoid w-full transition transform ${allowhover ? 'hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none hover:bg-[#ddd] light:hover:bg-[#222] hover:text-[#111] light:hover:text-[#eee]' : ''}`}>
+    <div className={`break-inside-avoid w-full transition transform ${thumbnail || title ? 'hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none hover:bg-[#ddd] light:hover:bg-[#222] hover:text-[#111] light:hover:text-[#eee]' : ''}`}>
       {/* TODO: pointer cursor and trigger modal */}
       <div className={thumbnail ? "grid text-center" : "grid my-auto text-center"}>
         <Thumbnail thumbnail={thumbnail} />

@@ -1,7 +1,8 @@
-import Image from "next/image";
 import Footer from "../components/footer";
+import Image from "next/image";
 import Nav from "../components/nav";
 import Panel from "../components/panel";
+
 
 export default function MotionGraphics() {
   return (

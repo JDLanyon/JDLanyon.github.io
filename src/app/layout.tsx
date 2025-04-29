@@ -1,7 +1,8 @@
-import type { Metadata } from "next";
 import { Overpass, Overpass_Mono, Doto } from "next/font/google";
+import type { Metadata } from "next";
 
 import "./globals.css";
+
 
 const overpass = Overpass({
   variable: "--font-overpass",

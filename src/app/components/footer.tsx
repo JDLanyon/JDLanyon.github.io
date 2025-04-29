@@ -1,4 +1,5 @@
 import Image from "next/image";
+
 import "../globals.css";
 import { SiGithub, SiInstagram, SiYoutube } from '@icons-pack/react-simple-icons';
 

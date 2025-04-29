@@ -1,5 +1,7 @@
-import "../globals.css";
 import Image from "next/image";
+
+import "../globals.css";
+
 
 export default function Hero() {
   return (
