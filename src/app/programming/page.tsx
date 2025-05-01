@@ -10,7 +10,7 @@ import Panel from "../components/panel";
 
 export default function Programming() {
   return (
-    <div>
+    <section className="min-h-[100vh] flex flex-col">
       <Nav />
         <div id="content" className="px-32 py-12">
 
@@ -24,6 +24,6 @@ export default function Programming() {
           </div>
         </div>
       <Footer />
-    </div>
+    </section>
   );
 }

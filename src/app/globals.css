@@ -22,6 +22,7 @@ body {
 }
 
 h1 {
+  padding-top: 16px;
   font-family: var(--font-overpass);
   font-size: 4em;
 }
@@ -33,4 +34,8 @@ h2 {
 
 a, p {
   font-size: 1em;
+}
+
+p {
+  padding-bottom: 4px;
 }

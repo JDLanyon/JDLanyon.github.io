@@ -36,7 +36,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${overpass.variable} ${overpass_mono.variable} ${doto.variable}`}>
-      <body>
+      <body className="min-h-[100vh]">
         {modal}
         {children}
       </body>
