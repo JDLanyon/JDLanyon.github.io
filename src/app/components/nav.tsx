@@ -1,9 +1,10 @@
 'use client'
 
+import { useState } from "react";
 import Image from "next/image";
 
 import "../globals.css";
-import { Menu } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { usePathname } from 'next/navigation'
 
 
@@ -26,7 +27,35 @@ function NavButton({text, href} : {text : string, href : string}) {
   }
 }
 
+function MobileMenu({ is_open, toggle } : {is_open : boolean, toggle : React.MouseEventHandler}) {
+  return (
+    <div
+      className={`fixed flex flex-col justify-center items-center z-10 top-0 right-0 h-full w-full bg-[var(--background)]/80 transition-transform duration-300 transform ${
+        is_open ? 'translate-x-0' : 'translate-x-full'
+      }`}
+    >
+      <X color="var(--secondary)" onClick={toggle} className="fixed right-8 top-8"/>
+      <div className="flex flex-col justify-center items-center space-y-8">
+          <NavButton text="Home" href="/" />
+          <NavButton text="About" href="/about" />
+          <NavButton text="Programming" href="/programming" />
+          <NavButton text="Motion Graphics" href="/motion_graphics" />
+
+        {/* Add other navigation links */}
+      </div>
+    </div>
+  );
+}
+
+
+
 export default function Nav() {
+
+  const [isMenuOpen, SetMenuOpen] = useState(false);
+  const MenuToggle = () => {
+    SetMenuOpen(!isMenuOpen);
+  }
+
   return (
     <nav className="z-10 grid grid-cols-7 w-screen gap-8 items-center justify-center text-center fixed top-0">
       {/* left side */}
@@ -57,14 +86,14 @@ export default function Nav() {
       {/* mobile options */}
 
       {/* burger menu */}
-      <div className="col-start-7 mx-auto gap-16 md:hidden">
-        <button onClick={async () => {
+      <div className="grid col-start-7 h-full w-full place-items-center mx-auto gap-16 md:hidden" onClick={async () => {
           console.log("hi");
         }}>
-        <Menu color="var(--secondary)" />
+        <Menu color="var(--secondary)" onClick={MenuToggle} className={`w-full transition-transform duration-300 transform ${isMenuOpen ? 'translate-x-full' : 'translate-x-0'}`} />
+        <MobileMenu is_open={isMenuOpen} toggle={MenuToggle}/>
 
-        </button>
       </div>
+      {/* mobile nav div */}
 
 
     </nav>
