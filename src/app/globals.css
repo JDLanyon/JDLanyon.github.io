@@ -1,18 +1,20 @@
 @import "tailwindcss";
 
 
-:root {
+@custom-variant dark (&:where(.dark, .dark *));
+@custom-variant light (&:where(.light, .light *));
+
+
+:root, .dark {
   --primary: #eee;
   --secondary: #ccc;
   --background: #050505;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    --primary: #111;
-    --secondary: #333;
-    --background: #eee;
-  }
+.light {
+  --primary: #111;
+  --secondary: #333;
+  --background: #eee;
 }
 
 body {
@@ -33,6 +35,7 @@ h2 {
 }
 
 a, p {
+  color: var(--secondary);
   font-size: 1em;
 }
 

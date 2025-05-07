@@ -27,6 +27,7 @@ export const metadata: Metadata = {
   description: "I made this with nextjs btw",
 };
 
+
 export default function RootLayout({
   modal,
   children,
@@ -35,7 +36,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${overpass.variable} ${overpass_mono.variable} ${doto.variable}`}>
+    <html lang="en" className={`light ${overpass.variable} ${overpass_mono.variable} ${doto.variable}`}>
       <body className="min-h-[100vh]">
         {modal}
         {children}

@@ -16,7 +16,7 @@ export default function Programming() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center justify-items-center p-8 gap-16">
             {projects_programming.map(p => (
-              <Link key={p.id} href={`/projects/${p.id}`} passHref>
+              <Link key={`${p.id}`} href={`/projects/${p.id}`} passHref>
                 <Panel title={p.title} thumbnail={p.thumbnail} description={p.description} />
               </Link>
           ))}

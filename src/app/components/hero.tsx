@@ -7,7 +7,7 @@ export default function Hero() {
   return (
     <div id="hero" className="z-1">
       <Image
-        className="dark:invert mx-auto"
+        className="invert mx-auto light:invert-0"
         src="/lotus.svg"
         width={256}
         height={256}
