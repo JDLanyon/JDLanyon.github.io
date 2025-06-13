@@ -1,5 +1,6 @@
 import { Overpass, Overpass_Mono, Doto } from "next/font/google";
 import type { Metadata } from "next";
+import { ThemeProvider } from 'next-themes';
 
 import "./globals.css";
 
@@ -36,10 +37,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`light ${overpass.variable} ${overpass_mono.variable} ${doto.variable}`}>
+    <html lang="en" className={`${overpass.variable} ${overpass_mono.variable} ${doto.variable}`} suppressHydrationWarning>
       <body className="min-h-[100vh]">
+        <ThemeProvider>
         {modal}
         {children}
+        </ThemeProvider>
       </body>
     </html>
   );

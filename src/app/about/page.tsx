@@ -34,7 +34,7 @@ export default function About() {
           </div>
 
         </div>
-      <Footer expand={true}/>
+      <Footer large={true}/>
     </section>
   );
 }

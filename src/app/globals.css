@@ -1,17 +1,17 @@
 @import "tailwindcss";
 
 
-@custom-variant dark (&:where(.dark, .dark *));
-@custom-variant light (&:where(.light, .light *));
+/* @custom-variant dark (&:where(.dark, .dark *));
+@custom-variant light (&:where(.light, .light *)); */
 
 
-:root, .dark {
+:root, [data-theme="dark"] {
   --primary: #eee;
   --secondary: #ccc;
   --background: #050505;
 }
 
-.light {
+[data-theme="light"] {
   --primary: #111;
   --secondary: #333;
   --background: #eee;
