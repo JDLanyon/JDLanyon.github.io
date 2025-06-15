@@ -24,7 +24,7 @@ export function Modal({ children }: { children: React.ReactNode }) {
       <div className="fixed inset-0 flex m-0 md:m-16 transition-all z-100 bg-[var(--background)]/80 border-solid border-[var(--primary)] border-1">
 
           <div className="absolute top-4 right-4 transform z-101">
-            <Button onclick={close} text="x" />
+            <Button onClick={close} text="x" />
           </div>
 
         <div className="flex-auto overflow-y-auto relative p-12 [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:none [&::-webkit-scrollbar-thumb]:bg-[var(--primary)]">

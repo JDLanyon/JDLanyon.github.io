@@ -12,7 +12,7 @@ interface PanelProps {
 
 export default function Panel({title, thumbnail, description} : PanelProps) {
   return (
-    <div className={`break-inside-avoid w-full transition transform m-4 ${thumbnail || title ? 'hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none hover:bg-[#ddd] light:hover:bg-[#222] hover:text-[#111] light:hover:text-[#eee]' : ''}`}>
+    <div className={`break-inside-avoid w-full transition transform m-4 hover:-translate-y-1 hover:bg-[var(--primary)] hover:text-[var(--background)]`}>
       {/* TODO: pointer cursor and trigger modal */}
       <div className={thumbnail ? "grid text-center" : "grid my-auto text-center"}>
         {thumbnail && 

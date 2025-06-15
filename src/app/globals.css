@@ -1,8 +1,9 @@
 @import "tailwindcss";
 
 
-/* @custom-variant dark (&:where(.dark, .dark *));
-@custom-variant light (&:where(.light, .light *)); */
+/* theme variants */
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+@custom-variant light (&:where([data-theme="light"], [data-theme="light"] *));
 
 
 :root, [data-theme="dark"] {
@@ -35,7 +36,6 @@ h2 {
 }
 
 a, p {
-  color: var(--secondary);
   font-size: 1em;
 }
 

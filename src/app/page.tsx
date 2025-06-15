@@ -1,13 +1,16 @@
+"use client"
+
 import Button from "./components/button";
 import Footer from "./components/footer";
 import Hero from "./components/hero";
 
 
 export default function Home() {
+
   return (
     <div>
       <img
-          className="hidden lg:block w-full h-full bg-cover absolute z-0 light:invert"
+          className={`hidden lg:block w-full h-full bg-cover absolute z-0 invert dark:invert-0`}
           src="/BG_1920.gif"
           width={1920}
           height={1080}
@@ -15,7 +18,7 @@ export default function Home() {
         />
         {/* mobile BG */}
         <img
-          className="block lg:hidden w-full h-full bg-cover absolute z-0 light:invert"
+          className="block lg:hidden w-full h-full bg-cover absolute z-0 invert"
           src="/BG_768.gif"
           width={1920}
           height={1080}

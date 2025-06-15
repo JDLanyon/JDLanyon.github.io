@@ -49,7 +49,7 @@ const ThemeSwitch = () => {
 
 export default function Footer({large = false} : {large? : boolean}) {
   return (
-    <footer className={`flex inline-flex w-full mx-auto items-center justify-center bottom-0  ${large ? "py-16 gap-[10%] text-lg  px-30 sm:px-0 sm:flex sm:flex-wrap" : "py-8 gap-8"}`}>
+    <footer className={`flex w-full mx-auto items-center justify-center bottom-0  ${large ? "py-16 gap-[10%] text-lg  px-30 sm:px-0 sm:flex sm:flex-wrap" : "py-8 gap-8"}`}>
       {/* Github */}
       <a
         className="flex items-center gap-2 p-2 hover:underline hover:underline-offset-4 text-[var(--secondary)]"
