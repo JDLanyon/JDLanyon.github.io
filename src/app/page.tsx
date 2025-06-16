@@ -18,7 +18,7 @@ export default function Home() {
         />
         {/* mobile BG */}
         <img
-          className="block lg:hidden w-full h-full bg-cover absolute z-0 invert"
+          className="block lg:hidden w-full h-full bg-cover absolute z-0 invert dark:invert-0"
           src="/BG_768.gif"
           width={1920}
           height={1080}
@@ -34,6 +34,7 @@ export default function Home() {
 
           </div>
         </main>
+      <Footer />
       </div>
     </div>
   );

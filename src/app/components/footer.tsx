@@ -13,6 +13,9 @@ import { useTheme } from 'next-themes';
 const ThemeSwitch = () => {
   const [mounted, setMounted] = useState(false)
   const { theme, setTheme } = useTheme()
+  const [isHovering, setIsHovered] = useState(false);
+  const onMouseEnter = () => setIsHovered(true);
+  const onMouseLeave = () => setIsHovered(false);
 
   // useEffect only runs on the client, so now we can safely show the UI
   useEffect(() => {
@@ -24,22 +27,20 @@ const ThemeSwitch = () => {
   }
 
   return (
-    <div className="flex">
+    <div id="theme_switch"
+      className="transition"
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}>
+
       {theme != 'light' ? 
         <Button onClick={() => setTheme('light')}>
-          <Circle />
+          {isHovering ? <Circle /> : <Moon /> }
         </Button> : null
       }
 
       {theme != 'dark' ? 
         <Button onClick={() => setTheme('dark')}>
-          <Moon  />
-        </Button> : null
-      }
-
-      {theme != 'system' ? 
-        <Button onClick={() => setTheme('system')} >
-          <Eclipse />
+          {isHovering ? <Moon /> : <Circle /> }
         </Button> : null
       }
 
@@ -49,7 +50,7 @@ const ThemeSwitch = () => {
 
 export default function Footer({large = false} : {large? : boolean}) {
   return (
-    <footer className={`flex w-full mx-auto items-center justify-center bottom-0  ${large ? "py-16 gap-[10%] text-lg  px-30 sm:px-0 sm:flex sm:flex-wrap" : "py-8 gap-8"}`}>
+    <footer className={`z-100 mt-auto flex w-full mx-auto items-center justify-center bottom-0 ${large ? "py-16 gap-[10%] text-lg  px-30 sm:px-0 sm:flex sm:flex-wrap" : "py-8 gap-8"}`}>
       {/* Github */}
       <a
         className="flex items-center gap-2 p-2 hover:underline hover:underline-offset-4 text-[var(--secondary)]"
