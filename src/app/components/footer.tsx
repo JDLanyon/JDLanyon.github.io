@@ -6,7 +6,7 @@ import "../globals.css";
 import Button from "./button";
 
 import { SiGithub, SiInstagram, SiYoutube } from '@icons-pack/react-simple-icons';
-import { Circle, Eclipse, Moon } from 'lucide-react';
+import { Circle, Eclipse, Moon, Linkedin } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { useTheme } from 'next-themes';
 
@@ -48,9 +48,9 @@ const ThemeSwitch = () => {
   )
 }
 
-export default function Footer({large = false} : {large? : boolean}) {
+export default function Footer({large = false, absolute = false} : {large? : boolean, absolute? : boolean}) {
   return (
-    <footer className={`z-100 mt-auto flex w-full mx-auto items-center justify-center bottom-0 ${large ? "py-16 gap-[10%] text-lg  px-30 sm:px-0 sm:flex sm:flex-wrap" : "py-8 gap-8"}`}>
+    <footer className={`z-100 mt-auto flex w-full mx-auto items-center justify-center bottom-0 ${large ? "py-16 gap-[10%] text-lg px-30 sm:px-0 sm:flex sm:flex-wrap" : "py-8 gap-8"} ${absolute ? "absolute" : "relative"}`}>
       {/* Github */}
       <a
         className="flex items-center gap-2 p-2 hover:underline hover:underline-offset-4 text-[var(--secondary)]"
@@ -62,6 +62,16 @@ export default function Footer({large = false} : {large? : boolean}) {
         GitHub
       </a>
 
+      {/* LinkedIn */}
+      <a
+        className="flex items-center gap-2 p-2 hover:underline hover:underline-offset-4 text-[var(--secondary)]"
+        href="https://www.linkedin.com/in/jdlanyon/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Linkedin color="var(--secondary)" />
+        LinkedIn
+      </a>
 
       {/* Youtube */}
       <a
@@ -77,9 +87,8 @@ export default function Footer({large = false} : {large? : boolean}) {
 
       {/* Instagram */}
       <a
-        title="work in progress."
         className="flex items-center gap-2 p-2 hover:underline hover:underline-offset-4 text-[var(--secondary)]"
-        // href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+        href="https://www.instagram.com/sausytime/"
         target="_blank"
         rel="noopener noreferrer"
       >

@@ -1,6 +1,35 @@
 export const PROGRAMMING = {
   UNI : [
     {
+      id : "IGB400",
+      title : "IGB400 - Slime Arcade",
+      description : "An arcade themed slime pet simulator built in godot"
+    },
+    {
+      id : "IGB388",
+      title: "IGB388 - Dead Bread",
+      description: "Group project in VR involving a resupply run in the store while fighting off zombies",
+      thumbnail: "start_screen.png"
+    },
+    {
+      id : "IGB200",
+      title: "IGB200 - Rafted",
+      description: "A group made pixel art game relating to QUT's STEM topics",
+      thumbnail: "rafted.png"
+    },
+    {
+      id : "CAB401",
+      title: "CAB401 - Parallel Processing Analysis",
+      description: "Rigourous performance analysis on Sebastion Lague's Marching Cubes Project",
+      thumbnail: "marching_cubes.png"
+    },
+    {
+      id : "IGB383",
+      title: "IGB383 - Boids",
+      description: "Implementing Boids, Finite State Machines and other enemy functionality",
+      thumbnail: "Idle Drones.png"
+    },
+    {
       id : "CAB201",
       title : "CAB201 - Mates-Rates (CLI)",
       description : "A basic CLI for managing customers and rental vehicles",
@@ -13,34 +42,10 @@ export const PROGRAMMING = {
       thumbnail : "menu_and_report.png"
     },
     {
-      id : "CAB401",
-      title: "CAB401 - Parallel Processing Analysis",
-      description: "Rigourous performance analysis on Sebastion Lague's Marching Cubes Project",
-      thumbnail: "marching_cubes.png"
-    },
-    {
       id : "IFB399",
       title: "IFB399 - BeeAware Extension",
-      description: "A custom extension that interacts with an existing program, linking correctly to a database using C#",
+      description: "A plugin that interacts with a project built by another capstone group, securely linking to a database in C#",
       thumbnail: "landing_page.png"
-    },
-    {
-      id : "IGB200",
-      title: "IGB200 - Rafted",
-      description: "A group made pixel art game relating to QUT's STEM topics",
-      thumbnail: "rafted.png"
-    },
-    {
-      id : "IGB383",
-      title: "IGB383 - Boids",
-      description: "Implementing Boids, Finite State Machines and other enemy functionality",
-      thumbnail: "Idle Drones.png"
-    },
-    {
-      id : "IGB388",
-      title: "IGB388 - VR",
-      description: "Group project in VR involving a resupply run in the store while fighting off zombies.",
-      thumbnail: "start_screen.png"
     },
   ]
 }
@@ -51,12 +56,12 @@ export const MOTION_GRAPHICS = {
     {
       id : "biv - mother father",
       title : "Biv - Mother//Father",
-      description : "Heavy distortion and flashing filters."
+      description : "Heavy distortion and flashing filters"
     },
     {
       id : "guccihighwaters - I ain't feeling better",
       title : "guccihighwaters - I ain't feeling better",
-      description : "Dynamic wavy text with chroma abberation and grain."
+      description : "Dynamic wavy text with chroma abberation and grain"
     },
     {
       id : "heylog - afraid",

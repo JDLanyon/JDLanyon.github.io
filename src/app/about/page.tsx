@@ -15,7 +15,7 @@ export default function About() {
         <div className="grid grid-cols-1 md:grid-cols-6 items-start justify-items-center p-8 gap-8">
           <Image
               className="mx-auto w-full col-span-6 md:row-1 md:col-span-3 md:col-start-4 lg:col-span-2 lg:col-start-5"
-              src="/temp/Black Butterfly.jpg"
+              src="/Me.jpg"
               // layout="contain"
               width={1000}
               height={1000}
@@ -25,11 +25,17 @@ export default function About() {
             />
             <div className="w-full col-span-6 float-left md:row-1 md:col-start-1 md:col-span-3 md:col-end-4 lg:col-span-4">
               <h1>What is this site?</h1>
-              <p>This is my portfolio, you can find more technical details about the project <Link href={`/projects/portfolio`} passHref className="font-bold underline">here</Link>.</p>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, sint repellendus repellat nesciunt magni odio eos! Soluta, accusantium. Consectetur, quidem reiciendis doloribus beatae voluptatibus suscipit voluptatem incidunt eos neque tempora impedit animi facere, excepturi, quis officiis quod modi sequi magni rem praesentium at nostrum? Exercitationem adipisci modi in veritatis doloremque?</p>
-              <h1>Who am I</h1>
-              <p>I'm Jackson Lanyon, a 24 year old uni student who thoroughly enjoys multimedia.</p>
+              <p>This is my portfolio built with NextJS, you can find more technical details about the project <Link href={`/projects/portfolio`} passHref className="font-bold underline">here</Link>.</p>
+              <h2>There doesn't seem to be much info here</h2>
+              <p>Yeah look, I'll be adding more but for now I just wanted to get this on github pages. Breakdowns on most projects should (hopefully) exist soon!</p>
+              <h1>Who's portfolio is this?</h1>
+              <p>I'm Jackson, a 24 year old who thoroughly enjoys multimedia, combining several skills to give more immersive interaction.</p>
+              <p>Currently I'm in my final year studying a Bachelor of Interactive Environments at QUT. Outside of that I focus on motion graphics and recreational programming.</p>
               <h1>What do I do?</h1>
+              <p>Well programming and motion graphics I suppose.</p>
+              <h1>Can I find a resume?</h1>
+              <p>I'm glad you asked!</p>
+              <p>Please don't hesitate to contact me at <a href="mailto:jlany9@hotmail.com?subject=Resume%20Request&body=Heyo,<br/><br/>I'd%20like%20to%20request%20your%20resume,<br/>Cheers.">jlany9@hotmail.com</a> or you can find my resume by visiting my <a href="https://www.linkedin.com/in/jdlanyon/" target="_blank">LinkedIn</a>. :)</p>
             </div>
           </div>
 

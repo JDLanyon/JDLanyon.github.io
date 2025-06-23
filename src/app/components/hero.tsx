@@ -14,7 +14,7 @@ export default function Hero() {
         alt="lotus"
       />
       {/* <h1 className="!font-[family-name:var(--font-doto)]">Home of epic B)</h1> */}
-      <a>Thanks for visiting my portfolio, start exploring with the options below!</a>
+      <p>Thanks for visiting my portfolio, start exploring with the options below!</p>
     </div>
   )
 }
