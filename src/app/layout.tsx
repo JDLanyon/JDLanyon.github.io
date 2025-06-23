@@ -39,7 +39,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${overpass.variable} ${overpass_mono.variable} ${doto.variable}`} suppressHydrationWarning>
       <body className="min-h-[100vh]">
-        <ThemeProvider>
+        <ThemeProvider defaultTheme="dark" enableSystem={false}>
         {modal}
         {children}
         </ThemeProvider>

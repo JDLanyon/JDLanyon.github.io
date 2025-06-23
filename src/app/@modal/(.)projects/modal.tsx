@@ -6,7 +6,7 @@ import "@/app/globals.css";
 import Button from '@/app/components/button';
 
 
-document.documentElement.style.overflow = "hidden" // prevent bg scrolling
+// document.documentElement.style.overflow = "hidden" // prevent bg scrolling
 
 export function Modal({ children }: { children: React.ReactNode }) {
   const router = useRouter();

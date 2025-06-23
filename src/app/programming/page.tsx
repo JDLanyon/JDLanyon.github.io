@@ -2,11 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-import { projects_programming } from "../project_data"
+import { PanelsFromData } from "../components/panel";
+import { PROGRAMMING } from "../project_data"
 import Button from "../components/button";
 import Footer from "../components/footer";
 import Nav from "../components/nav";
-import Panel from "../components/panel";
 
 
 export default function Programming() {
@@ -21,14 +21,9 @@ export default function Programming() {
             <Button text="test" />
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center justify-items-center p-8 gap-16">
-            {projects_programming.map(p => (
-              <Link key={`${p.id}`} href={`/projects/${p.id}`} passHref>
-                <Panel title={p.title} thumbnail={p.thumbnail} description={p.description} />
-              </Link>
-          ))}
+          <PanelsFromData heading="Uni Projects" thumbnails_path="/programming/uni/" data={PROGRAMMING.UNI} />
+          {/* <PanelsFromData heading="Uni Projects" thumbnails_path="/programming/uni_revisited/" data={PROGRAMMING.UNI_REVISITED} /> */}
 
-          </div>
         </div>
       <Footer />
     </section>

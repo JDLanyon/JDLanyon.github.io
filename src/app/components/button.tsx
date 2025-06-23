@@ -13,7 +13,8 @@ interface ButtonProps {
   children?: React.ReactNode;
 }
 
-// TODO: Include Image as a prop somehow
+// TODO: auto generate buttons based on existing headings
+
 
 export default function Button({text, href = "#", onClick, children} : ButtonProps) {
   return (
