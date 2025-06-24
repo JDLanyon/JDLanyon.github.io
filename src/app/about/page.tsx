@@ -26,8 +26,7 @@ export default function About() {
             <div className="w-full col-span-6 float-left md:row-1 md:col-start-1 md:col-span-3 md:col-end-4 lg:col-span-4">
               <h1>What is this site?</h1>
               <p>This is my portfolio built with NextJS, you can find more technical details about the project <Link href={`/projects/portfolio`} passHref className="font-bold underline">here</Link>.</p>
-              <h2>There doesn't seem to be much info here</h2>
-              <p>Yeah look, I'll be adding more but for now I just wanted to get this on github pages. Breakdowns on most projects should (hopefully) exist soon!</p>
+              <p>Eventually more will be added to this portfolio, for the moment however you can find my previous projects and information about them. More breakdowns on projects should (hopefully) exist soon.</p>
               <h1>Who's portfolio is this?</h1>
               <p>I'm Jackson, a 24 year old who thoroughly enjoys multimedia, combining several skills to give more immersive interaction.</p>
               <p>Currently I'm in my final year studying a Bachelor of Interactive Environments at QUT. Outside of that I focus on motion graphics and recreational programming.</p>

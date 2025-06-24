@@ -18,7 +18,7 @@ export function Modal({ children }: { children: React.ReactNode }) {
   return (
     <div>
       {/* empty div for closing the modal */}
-      <div onClick={close} className="fixed w-full h-full z-99 m-0">
+      <div onClick={close} className="fixed w-full h-full z-10 m-0">
       </div>
       {/* modal */}
       <div className="fixed inset-0 flex m-0 md:m-16 transition-all z-100 bg-[var(--background)]/80 border-solid border-[var(--primary)] border-1">
