@@ -54,55 +54,63 @@ export const PROGRAMMING = {
 export const MOTION_GRAPHICS = {
   SNIPPETS : [ 
     {
-      id : "biv - mother father",
+      id : "biv_mother_father",
       title : "Biv - Mother//Father",
       description : "Heavy distortion and flashing filters"
     },
     {
-      id : "guccihighwaters - I ain't feeling better",
+      id : "guccihighwaters_i_aint_feeling_better",
       title : "guccihighwaters - I ain't feeling better",
       description : "Dynamic wavy text with chroma abberation and grain"
     },
     {
-      id : "heylog - afraid",
+      id : "heylog_afraid",
+      title : "heylog - afraid"
     },
     {
-      id : "heylog - simulation",
+      id : "heylog_simulation",
+      title : "heylog - simulation"
     },
     {
-      id : "hiraeth - bless you",
+      id : "hiraeth_bless_you",
+      title : "hiraeth - bless you"
     },
     {
-      id : "hiraeth - slept through everything",
+      id : "hiraeth_slept_through_everything",
+      title : "hiraeth - slept through everything"
     },
   ],
 
   FULL_PROJECTS : [
     {
-      id : "heylog - backroom",
+      id : "heylog_backroom",
+      title : "heylog - backroom",
       description : "My first lyric video"
     },
     {
-      id : "hiraeth - newmaker IV",
+      id : "hiraeth_newmaker_IV",
+      title : "hiraeth - newmaker IV",
       description : "My most recent lyric video"
     },
     {
-      id : "hiraeth - battle scared",
+      id : "hiraeth_battle_scared",
       title: "hireath ft. heylog, pvrk - battle scarred",
     },
     {
-      id : "sinxi - eyes",
+      id : "sinxi_eyes",
+      title : "sinxi - eyes",
       description : "a slower paced cinematic aesthetic with time remapping"
     },
     {
-      id : "hiraeth - sink",
+      id : "hiraeth_sink",
       title: "hiraeth ft. kais - sink"
     },
     {
-      id : "hiraeth - violent",
+      id : "hiraeth_violent",
+      title : "hiraeth - violent",
     },
     {
-      id : "rouri404 - lostcause",
+      id : "rouri404_lostcause",
       title : "rouri404 ft. heylog - lostcause",
     },
   ]
