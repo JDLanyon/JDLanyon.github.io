@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Modal } from "../modal"
+import { Modal } from "../../modal"
 import { Embed, LocalVideo } from "@/app/components/modal_elements";
 
 // TODO: Props
@@ -10,10 +10,10 @@ export default async function Project() {
         <b><p>*volume warning* - check volume before playing.</p>
         <p>*epilepsy warning* - flashing images.</p></b>
       </div>
-      <Embed uuid="uOajuQK7Qiw" />
+      <Embed uuid="FcapvbVGHZo" />
 
       <div>
-        <h1 className="text-center m-0">sinxi - eyes</h1>
+        <h1 className="text-center m-0">rouri404 ft. heylog - lostcause</h1>
       </div>
     </Modal>
   )

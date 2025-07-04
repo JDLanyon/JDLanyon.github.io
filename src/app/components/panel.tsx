@@ -11,6 +11,14 @@ interface PanelProps {
   description?: string;
 }
 
+interface PanelsFromDataProps {
+  id? : string,
+  category : string,
+  sub_category?: string,
+  heading? : string,
+  thumbnails_path? : string,
+  data : PanelProps[]
+}
 
 const imageExists = async (path : string) => {
   return await fetch(`http://localhost:3000${path}`, {
@@ -19,13 +27,13 @@ const imageExists = async (path : string) => {
 };
 
 // the PanelProps[] datatype was big brain fr
-export function PanelsFromData({id, category, heading, thumbnails_path, data} : {id? : string, category : string, heading? : string, thumbnails_path? : string, data : PanelProps[]}) {
+export function PanelsFromData({id, category, sub_category, heading, thumbnails_path, data} : PanelsFromDataProps) {
   return (
     <div id={id}>
       <h2>{heading}</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 auto-rows-min items-center justify-items-center p-8 gap-16">
       {data.map(p => (
-        <Link key={`${p.id}`} href={`/${category}/${p.id}`} passHref>
+        <Link key={`${p.id}`} href={`/${category}/${sub_category}/${p.id}`} passHref>
         
         {thumbnails_path ? 
         <Panel id={p.id} title={p.title} description={p.description} thumbnail={`${thumbnails_path}${p.id}/${p.thumbnail ? p.thumbnail : "thumbnail.png"}`} /> :
