@@ -11,9 +11,9 @@ export function Embed({uuid} : {uuid : string}) {
   )
 }
 
-export function LocalVideo({ file } : { file : string }) {
+export function LocalVideo({ file, thumbnail } : { file : string, thumbnail? : string }) {
   return (
-    <video controls preload="none" aria-label="Video player">
+    <video width="560" height="315" controls preload="none" aria-label="Video player" poster={thumbnail}>
       <source src={file} type="video/mp4" />
       Your browser does not support the video tag :(.
     </video>

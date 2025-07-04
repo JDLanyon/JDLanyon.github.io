@@ -6,15 +6,15 @@ import { Embed, LocalVideo } from "@/app/components/modal_elements";
 export default async function Project() {
   return (
     <Modal>
-      <LocalVideo file="/motion_graphics/snippets/biv_mother_father/Snippet.mp4" />
-      <div className="text-center my-8">
-        <p>*volume warning* - check volume before playing.</p>
-        <p>*epilepsy warning* - flashing images.</p>
+      <div className="text-center my-2">
+        <b><p>*volume warning* - check volume before playing.</p>
+        <p>*epilepsy warning* - flashing images.</p></b>
       </div>
+      <LocalVideo file="/motion_graphics/snippets/biv_mother_father/Snippet.mp4" thumbnail="/motion_graphics/snippets/biv_mother_father/thumbnail.png" />
 
       <div>
-        <h1>Biv - Mother // Father</h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 auto-rows-min text-justify gap-8">
+        <h1 className="text-center m-0">Biv - Mother // Father</h1>
+        {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 auto-rows-min text-justify gap-8">
           <div className="col-span-2">
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 auto-rows-min text-justify gap-8">
@@ -38,7 +38,7 @@ export default async function Project() {
           height={1000}
           alt="panel thumbnail"
           />
-        </div>
+        </div> */}
       </div>
     </Modal>
   )

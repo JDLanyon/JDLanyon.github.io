@@ -13,6 +13,7 @@ export function Modal({ children }: { children: React.ReactNode }) {
 
   function close() {
     router.back();
+    router.refresh();
   }
 
   return (
@@ -27,7 +28,7 @@ export function Modal({ children }: { children: React.ReactNode }) {
             <Button onClick={close} text="x" />
           </div>
 
-        <div className="flex-auto overflow-y-auto relative p-12 [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:none [&::-webkit-scrollbar-thumb]:bg-[var(--primary)]">
+        <div className="flex-auto overflow-y-auto relative p-8 [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:none [&::-webkit-scrollbar-thumb]:bg-[var(--primary)]">
           {children}
         </div>
 

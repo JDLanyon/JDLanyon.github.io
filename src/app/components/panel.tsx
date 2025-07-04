@@ -52,7 +52,7 @@ export default async function Panel({id, title, thumbnail, description} : PanelP
     if (result.status == 200) {
       // image actually exists, return with thumbnail
       return (
-        <div className={`break-inside-avoid w-full transition transform m-4 hover:-translate-y-1 hover:bg-[var(--primary)] hover:text-[var(--background)]`}>
+        <div className={`break-inside-avoid w-full transition transform hover:-translate-y-1 hover:bg-[var(--primary)] hover:text-[var(--background)]`}>
           {/* TODO: pointer cursor and trigger modal */}
           <div className={thumbnail ? "grid text-center" : "grid my-auto text-center"}>
             {thumbnail && result.status === 200 ? 
