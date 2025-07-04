@@ -46,8 +46,3 @@ a {
 p {
   padding-bottom: 4px;
 }
-
-/* default img width is 60% for whatever reason, hotfix moment :skull_emoji: */
-img {
-  width: 100% !important;
-}

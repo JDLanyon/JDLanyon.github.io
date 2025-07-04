@@ -109,6 +109,10 @@ export const MOTION_GRAPHICS = {
       id : "hiraeth_violent",
       title : "hiraeth - violent",
     },
+        {
+      id : "sadeyes_poison",
+      title : "sadeyes - poison",
+    },
     {
       id : "rouri404_lostcause",
       title : "rouri404 ft. heylog - lostcause",

@@ -19,7 +19,7 @@ export default function Programming() {
             <Button text="Uni Projects" href="#uni" />
           </div>
 
-          <PanelsFromData id="uni" heading="Uni Projects" thumbnails_path="/programming/uni/" data={PROGRAMMING.UNI} />
+          <PanelsFromData id="uni" category="programming" heading="Uni Projects" thumbnails_path="/programming/uni/" data={PROGRAMMING.UNI} />
           {/* <PanelsFromData heading="Uni Projects" thumbnails_path="/programming/uni_revisited/" data={PROGRAMMING.UNI_REVISITED} /> */}
 
         </div>
