@@ -6,14 +6,14 @@ import { Embed, LocalVideo } from "@/app/components/modal_elements";
 export default async function Project() {
   return (
     <Modal>
-      <div className="text-center my-2">
-        <b><p>*volume warning* - check volume before playing.</p>
-        <p>*epilepsy warning* - flashing images.</p></b>
-      </div>
-      <LocalVideo file="/motion_graphics/snippets/biv_mother_father/Snippet.mp4" thumbnail="/motion_graphics/snippets/biv_mother_father/thumbnail.png" />
-
       <div>
-        <h1 className="text-center m-0 mb-8">Biv - Mother // Father</h1>
+        <h1 className="text-center m-0">Biv - Mother // Father</h1>
+
+        <div className="text-center my-4">
+          <b><p>*volume warning* - check volume before playing.</p>
+          <p>*epilepsy warning* - flashing images.</p></b>
+          <LocalVideo file="/motion_graphics/snippets/biv_mother_father/Snippet.mp4" thumbnail="/motion_graphics/snippets/biv_mother_father/thumbnail.png" />
+        </div>
 
         <div className="flex mb-4 gap-8">
           <Image
