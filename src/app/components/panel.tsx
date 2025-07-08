@@ -27,7 +27,7 @@ const imageExists = async (path : string) => {
 };
 
 // the PanelProps[] datatype was big brain fr
-export function PanelsFromData({id, category, sub_category, heading, thumbnails_path, data} : PanelsFromDataProps) {
+export async function PanelsFromData({id, category, sub_category, heading, thumbnails_path, data} : PanelsFromDataProps) {
   return (
     <div id={id}>
       <h2>{heading}</h2>
@@ -51,19 +51,19 @@ export default async function Panel({id, title, thumbnail, description} : PanelP
   // if there's no title use id
   if (!title && id) title=id;
 
-  console.log(thumbnail)
-
   // if a thumbnail was provided, try rendering with the thumbnail
   if (thumbnail) {
     // thumbnail was provided, check that the image itself exists
-    const result = await imageExists(thumbnail)
-    if (result.status == 200) {
+
+    // this fuckin breaks on static pages ffs
+    // const result = await imageExists(thumbnail)
+      
       // image actually exists, return with thumbnail
       return (
         <div className={`break-inside-avoid w-full transition transform hover:-translate-y-1 hover:bg-[var(--primary)] hover:text-[var(--background)]`}>
           {/* TODO: pointer cursor and trigger modal */}
           <div className={thumbnail ? "grid text-center" : "grid my-auto text-center"}>
-            {thumbnail && result.status === 200 ? 
+            {thumbnail ? 
               <Image
               className="mx-auto w-full"
               src={thumbnail}
@@ -81,7 +81,6 @@ export default async function Panel({id, title, thumbnail, description} : PanelP
         </div>
       );
     }
-  }
 
   // no thumbnail
   return (
