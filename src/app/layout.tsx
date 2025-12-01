@@ -30,17 +30,14 @@ export const metadata: Metadata = {
 
 
 export default function RootLayout({
-  // modal,
   children,
 }: Readonly<{
-  // modal: React.ReactNode;
   children: React.ReactNode;
 }>) {
   return (
     <html lang="en" className={`${overpass.variable} ${overpass_mono.variable} ${doto.variable}`} suppressHydrationWarning>
-      <body className="min-h-[100vh]">
+      <body className="min-h-screen">
         <ThemeProvider defaultTheme="dark" enableSystem={false}>
-        {/* {modal} */}
         {children}
         </ThemeProvider>
       </body>
