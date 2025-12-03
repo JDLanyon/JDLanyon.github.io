@@ -1,4 +1,10 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-# Woo Portfolio (again)
-Unlike the others, this one I've built from the ground up, taking my time to learn [Next.js](https://nextjs.org) and creating a portfolio I'm proud of.
+### Welcome to my github.io repository!
+[jdlanyon.github.io](https://jdlanyon.github.io/)
+
+---
+
+This repository used to be for my portfolio, but since wanting to move away from a static nextjs application I've since moved that to a domain I've yet to decide on, the link will become available here so stay tuned 👀
+
+This will be the place for a quick view of some of my existing repositories and some links to my portfolio, socials, etc.
