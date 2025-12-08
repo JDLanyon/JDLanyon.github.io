@@ -32,13 +32,13 @@ const ThemeSwitch = () => {
       onMouseLeave={onMouseLeave}>
 
       {theme != 'light' ? 
-        <Button onClick={() => setTheme('light')}>
+        <Button no_border onClick={() => setTheme('light')}>
           {isHovering ? <Circle /> : <Moon /> }
         </Button> : null
       }
 
       {theme != 'dark' ? 
-        <Button onClick={() => setTheme('dark')}>
+        <Button no_border onClick={() => setTheme('dark')}>
           {isHovering ? <Moon /> : <Circle /> }
         </Button> : null
       }
@@ -49,51 +49,7 @@ const ThemeSwitch = () => {
 
 export default function Footer() {
   return (
-    <footer className="relative z-1 w-min mx-auto flex-col flex md:flex-row items-center">
-      {/* Github */}
-      <Link
-        className="flex gap-2 p-2 hover:underline hover:underline-offset-4 text-(--secondary)"
-        href="https://github.com/JDLanyon"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <SiGithub color="var(--secondary)" />
-        <p>GitHub</p>
-      </Link>
-
-      {/* LinkedIn */}
-      <Link
-        className="flex gap-2 p-2 hover:underline hover:underline-offset-4 text-(--secondary)"
-        href="https://www.linkedin.com/in/jdlanyon/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <Linkedin color="var(--secondary)" />
-        <p>LinkedIn</p>
-      </Link>
-
-      {/* Youtube */}
-      <Link
-        className="flex gap-2 p-2 hover:underline hover:underline-offset-4 text-(--secondary)"
-        href="https://www.youtube.com/@sausytime"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <SiYoutube color="var(--secondary)" />
-        <p>YouTube</p>
-      </Link>
-
-      {/* Instagram */}
-      <Link
-        className="flex gap-2 p-2 hover:underline hover:underline-offset-4 text-(--secondary)"
-        href="https://www.instagram.com/sausytime/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <SiInstagram color="var(--secondary)" />
-        <p>Instagram</p>
-      </Link>
-
+    <footer className="relative z-1 w-min mx-auto my-16 flex-col flex md:flex-row items-center">
       <ThemeSwitch />
     </footer>
   )
