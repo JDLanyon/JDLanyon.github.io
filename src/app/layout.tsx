@@ -37,9 +37,14 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${overpass.variable} ${overpass_mono.variable} ${doto.variable}`} suppressHydrationWarning>
       <body className="min-h-screen">
-        <ThemeProvider defaultTheme="dark" enableSystem={false}>
-        {children}
-        </ThemeProvider>
+
+        
+        {/* Content */}
+        <div className="relative z-10">
+          <ThemeProvider defaultTheme="dark" enableSystem={false}>
+          {children}
+          </ThemeProvider>
+        </div>
       </body>
     </html>
   );

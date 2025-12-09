@@ -5,6 +5,12 @@
 @custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
 @custom-variant light (&:where([data-theme="light"], [data-theme="light"] *));
 
+/* globals.css or in a style tag */
+:root {
+  --bg-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb');
+  --bg-position: center;
+  --bg-size: cover;
+}
 
 :root, [data-theme="dark"] {
   --primary: #eee;
@@ -45,4 +51,37 @@ a {
 
 p {
   padding-bottom: 4px;
+}
+/* Add these to your globals.css */
+:root {
+  --mask-x: 50%;
+  --mask-y: 50%;
+  --mask-radius: 0px;
+}
+
+/* For the masking solution */
+.mask-clip {
+  mask-image: radial-gradient(circle at var(--mask-x, 50%) var(--mask-y, 50%), 
+    black var(--mask-radius, 0px), 
+    transparent var(--mask-radius, 0px));
+  -webkit-mask-image: radial-gradient(circle at var(--mask-x, 50%) var(--mask-y, 50%), 
+    black var(--mask-radius, 0px), 
+    transparent var(--mask-radius, 0px));
+}
+
+/* Ensure proper z-index stacking */
+.z-20 {
+  z-index: 20;
+}
+.z-10 {
+  z-index: 10;
+}
+.z-0 {
+  z-index: 0;
+}
+.-z-10 {
+  z-index: -10;
+}
+.-z-20 {
+  z-index: -20;
 }
