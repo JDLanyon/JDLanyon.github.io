@@ -49,7 +49,7 @@ const ThemeSwitch = () => {
 
 export default function Footer() {
   return (
-    <footer className="relative z-1 w-min mx-auto my-16 flex-col flex md:flex-row items-center">
+    <footer className="relative z-1 w-min mx-auto my-8 flex-col flex md:flex-row items-center">
       <ThemeSwitch />
     </footer>
   )

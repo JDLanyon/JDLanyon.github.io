@@ -1,28 +1,38 @@
 "use client"
 
 import Image from "next/image";
+import { useState, useEffect } from "react";
 import { SiLinkerd, SiGithub, SiInstagram, SiYoutube } from '@icons-pack/react-simple-icons';
 import { Linkedin } from 'lucide-react';
-import Button from "./components/button";
-import Footer from "./components/footer";
+import Button from "@/app/components/button";
+import Footer from "@/app/components/footer";
+import { useHover } from "@/app/utilities/hover_context";
+import { getRandomImage, available_images } from "@/app/utilities/random_image";
 
 
 export default function Home() {
+  const { blurBackground } = useHover();
+  const [randomImage, setRandomImage] = useState<string>('');
+  const [isLoading, setIsLoading] = useState<boolean>(true);
 
+  useEffect(() => {
+    // Set random image on client side
+    const image = getRandomImage(available_images);
+    setRandomImage(image);
+    setIsLoading(false);
+  }, []);
+  
+  if (isLoading) return <div>Loading...</div>;
   return (
-    <main className="w-screen relative min-h-screen">
+    <main className="w-screen relative">
       {/* Background Image Container */}
-      <div 
-        className="fixed inset-0 bg-cover bg-center -z-20 group-hover:opacity-100 transition-opacity duration-300"
-        style={{
-          backgroundImage: 'url(https://images.unsplash.com/photo-1506744038136-46273834b3fb)',
-        }}
-      />
+      <div className={`fixed inset-0 bg-cover bg-center -z-20 transition-opacity`}
+      style={{backgroundImage: isLoading ? undefined : `url(${randomImage})` }}/>
       {/* Blur Overlay */}
-      <div className="fixed inset-0 backdrop-blur-xs backdrop-grayscale-25 backdrop-brightness-75 -z-10" />
+      <div className={`${blurBackground ? 'duration-2000 delay-1000' : 'opacity-0 duration-500'} fixed inset-0 backdrop-blur-xs backdrop-brightness-90 backdrop-grayscale-10 -z-10 transition-opacity ease-in-out`} />
 
-      <div className="my-8 items-center text-center *:z-0">
-        <div id="hero" className="z-1">
+      <div className="items-center text-center *:z-0">
+        <div id="hero" className="z-1 pt-8">
           <p>Thanks for checking out my github.io page &lt;3</p>
           <Image
             className="invert mx-auto w-16 md:w-32 light:invert-0"
@@ -31,11 +41,11 @@ export default function Home() {
             height={256}
             alt="lotus"
             />
-          <h3 className="text-red-400">I'm currently making changes, portfolio will be back soon :&gt;</h3>
+          <h3 className="text-red-900">I'm currently making changes, portfolio will be back soon :&gt;</h3>
         </div>
 
-          <div className="m-4 gap-4 w-fill md:flex flex-row flex-wrap *:flex-grow items-center text-center">
-            <div className="space-y-4">
+          <div className="m-4 gap-4 w-fill md:flex flex-row flex-wrap *:min-w-1/3 *:grow *:space-y-4 items-center text-center">
+            <div>
               <h1>Links</h1>
               <Button text="Portfolio" href="https://jdlanyon.dev/" target_blank/>
               <Button text="GitHub" href="https://github.com/JDLanyon" target_blank><SiGithub /></Button>
@@ -43,7 +53,7 @@ export default function Home() {
               <Button text="YouTube" href="https://www.youtube.com/@sausytime" target_blank><SiYoutube /></Button>
               <Button text="Instagram" href="https://www.instagram.com/sausytime/" target_blank><SiInstagram /></Button>
             </div>
-            <div className="space-y-4">
+            <div>
               <h1>Projects</h1>
               <Button text="Portfolio" href="https://jdlanyon.dev/" target_blank/>
               <Button text="Programming" href="/programming"/>

@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { ThemeProvider } from 'next-themes';
 
 import "./globals.css";
+import { HoverProvider } from '@/app/utilities/hover_context';
 
 
 const overpass = Overpass({
@@ -41,9 +42,11 @@ export default function RootLayout({
         
         {/* Content */}
         <div className="relative z-10">
-          <ThemeProvider defaultTheme="dark" enableSystem={false}>
-          {children}
-          </ThemeProvider>
+          <HoverProvider>
+            <ThemeProvider defaultTheme="dark" enableSystem={false}>
+              {children}
+            </ThemeProvider>
+          </HoverProvider>
         </div>
       </body>
     </html>
