@@ -10,5 +10,5 @@ export const available_images: string[] = [
   '/photography/Moon.jpeg',
   '/photography/moon2.jpeg',
   '/photography/moon3.jpg',
-  '/photography/seat.jpg',
+  '/photography/seat.jpeg',
 ];

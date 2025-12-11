@@ -8,12 +8,23 @@ import Button from "@/app/components/button";
 import Footer from "@/app/components/footer";
 import { useHover } from "@/app/utilities/hover_context";
 import { getRandomImage, available_images } from "@/app/utilities/random_image";
+import RepositoryCard from "./components/repo_card";
+import Repos from "./components/repo_cards";
 
 
 export default function Home() {
+  // background hover blur magic
   const { blurBackground } = useHover();
   const [randomImage, setRandomImage] = useState<string>('');
   const [isLoading, setIsLoading] = useState<boolean>(true);
+  
+  // repository list
+  const repos = [
+    'jdlanyon/jdlanyon-dev',
+    'jdlanyon/slimearcade',
+    'jdlanyon/IFB399_BeeAware_Hive_Inspections',
+    'jdlanyon/advent-of-code-2025',
+  ];
 
   useEffect(() => {
     // Set random image on client side
@@ -55,9 +66,10 @@ export default function Home() {
             </div>
             <div>
               <h1>Projects</h1>
-              <Button text="Portfolio" href="https://jdlanyon.dev/" target_blank/>
-              <Button text="Programming" href="/programming"/>
-              <Button text="Motion Graphics" href="/motion_graphics"/>
+              {repos.map((repo, index) => (
+                <RepositoryCard key={index} repo={repo} />
+              ))}
+              <p>This repository list uses client-side fetching</p>
             </div>
           </div>
         <Footer />
