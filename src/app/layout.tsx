@@ -1,6 +1,5 @@
 import { Overpass, Overpass_Mono, Doto } from "next/font/google";
 import type { Metadata } from "next";
-import { ThemeProvider } from 'next-themes';
 
 import "./globals.css";
 import { HoverProvider } from '@/app/utilities/hover_context';
@@ -42,11 +41,9 @@ export default function RootLayout({
         
         {/* Content */}
         <div className="relative z-10">
-          <HoverProvider>
-            <ThemeProvider defaultTheme="dark" enableSystem={false}>
-              {children}
-            </ThemeProvider>
-          </HoverProvider>
+        <HoverProvider>
+            {children}
+        </HoverProvider>
         </div>
       </body>
     </html>

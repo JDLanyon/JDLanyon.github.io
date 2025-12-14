@@ -28,13 +28,16 @@ export default function Button({
   const { setBlurBackground } = useHover();
   return (
     <div 
-      className={`${no_border ? "" : "border border-(--primary)"} transition transform hover:backdrop-invert hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none relative overflow-hidden`}
+      className={`${no_border ? "" : "border border-(--primary) hover:border-(--primary_inverse)"}
+        relative overflow-hidden transition transform p-4 cursor-pointer motion-reduce:transition-none motion-reduce:hover:transform-none
+        hover:text-(--secondary_inverse) hover:backdrop-invert hover:backdrop-saturate-10 hover:backdrop-brightness-150 hover:-translate-y-1
+        backdrop-blur-xs backdrop-saturate-110 hover:backdrop-blur-none`}
       onMouseEnter={() => setBlurBackground(false)}
       onMouseLeave={() => setBlurBackground(true)}
       >
         <a
           onClick={onClick}
-          className="gap-4 flex items-center justify-center h-16 px-4 text-(--primary)! relative z-10"
+          className="gap-4 flex items-center justify-center h-16 px-4 relative z-10"
           href={href}
           target={target_blank ? "_blank" : ""}
           rel="noopener noreferrer"

@@ -10,7 +10,8 @@ import { useHover } from "@/app/utilities/hover_context";
 import { getRandomImage, available_images } from "@/app/utilities/random_image";
 import RepositoryCard from "./components/repo_card";
 import Repos from "./components/repo_cards";
-
+import { extractColoursFromImage } from '@/app/utilities/set_colours'
+import ColouredIcon from "./components/coloured_icon";
 
 export default function Home() {
   // background hover blur magic
@@ -21,19 +22,24 @@ export default function Home() {
   // repository list
   const repos = [
     'jdlanyon/jdlanyon-dev',
+    'OvercaffeinatedCAB302/fish-tank',
     'jdlanyon/slimearcade',
     'jdlanyon/IFB399_BeeAware_Hive_Inspections',
     'jdlanyon/advent-of-code-2025',
   ];
+
+
 
   useEffect(() => {
     // Set random image on client side
     const image = getRandomImage(available_images);
     setRandomImage(image);
     setIsLoading(false);
+    // Extract colors from the image
+    extractColoursFromImage(image);
   }, []);
   
-  if (isLoading) return <div>Loading...</div>;
+  // if (isLoading) return <div>Loading...</div>;
   return (
     <main className="w-screen relative">
       {/* Background Image Container */}
@@ -45,17 +51,11 @@ export default function Home() {
       <div className="items-center text-center *:z-0">
         <div id="hero" className="z-1 pt-8">
           <p>Thanks for checking out my github.io page &lt;3</p>
-          <Image
-            className="invert mx-auto w-16 md:w-32 light:invert-0"
-            src="/lotus.svg"
-            width={256}
-            height={256}
-            alt="lotus"
-            />
-          <h3 className="text-red-900">I'm currently making changes, portfolio will be back soon :&gt;</h3>
+            <ColouredIcon name="lotus" />
+          <h3 className="text-(--secondary)">I'm currently making changes, portfolio will be available soon :&gt;</h3>
         </div>
 
-          <div className="m-4 gap-4 w-fill md:flex flex-row flex-wrap *:min-w-1/3 *:grow *:space-y-4 items-center text-center">
+          <div className="m-4 gap-4 w-fill md:flex flex-row flex-wrap *:min-w-1/3 *:grow *:space-y-4 items-top text-center">
             <div>
               <h1>Links</h1>
               <Button text="Portfolio" href="https://jdlanyon.dev/" target_blank/>

@@ -2,10 +2,10 @@
 
 import { useRouter } from 'next/navigation'
 import Image from "next/image";
+import Link from 'next/link'
 import "../globals.css";
 import { useHover } from '@/app/utilities/hover_context';
 import { useEffect, useState, ReactNode } from 'react';
-
 
 interface GitHubRepoData {
   name: string;
@@ -39,7 +39,7 @@ export default function RepositoryCard({ repo, className = "", no_border, onClic
   const [error, setError] = useState<string | null>(null);
   const { setBlurBackground } = useHover();
 
-  // fetch re
+  // fetch repo data
   useEffect(() => {
     const fetchRepoData = async () => {
       try {
@@ -73,35 +73,20 @@ export default function RepositoryCard({ repo, className = "", no_border, onClic
   if (loading) {
     return (
       <div className={`animate-pulse ${className}`}>
-        <div className="bg-gray-200 dark:bg-gray-700 rounded-lg p-6">
-          <div className="h-4 bg-gray-300 dark:bg-gray-600 rounded w-3/4 mb-4"></div>
-          <div className="h-3 bg-gray-300 dark:bg-gray-600 rounded w-full mb-2"></div>
-          <div className="h-3 bg-gray-300 dark:bg-gray-600 rounded w-2/3 mb-4"></div>
-          <div className="flex space-x-4">
-            <div className="h-4 bg-gray-300 dark:bg-gray-600 rounded w-16"></div>
-            <div className="h-4 bg-gray-300 dark:bg-gray-600 rounded w-16"></div>
-            <div className="h-4 bg-gray-300 dark:bg-gray-600 rounded w-16"></div>
-          </div>
+        <div className="bg-(--background) opacity-50 py-16">
+          <p>Loading...</p>
         </div>
       </div>
     );
   }
 
   if (error) {
-    return (
-    <div 
-      className={`${no_border ? "" : "border border-(--primary)"} transition transform hover:backdrop-invert hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none relative overflow-hidden`}
-      onMouseEnter={() => setBlurBackground(false)}
-      onMouseLeave={() => setBlurBackground(true)}
-      >
-        <h3 className="my-2">Error Loading Repository</h3>
-        <p className="text-sm">{error}</p>
-        <p className="text-xs my-2">Repo: {repo}</p>
-      </div>
-    );
+    console.log("Error loading repository: ", error)
+    return null;
   }
 
   if (!repoData) {
+    console.log("Error getting repository data.")
     return null;
   }
   // Format the date
@@ -114,7 +99,10 @@ export default function RepositoryCard({ repo, className = "", no_border, onClic
 
   return (
     <div 
-      className={`${no_border ? "" : "border border-(--primary)"}  relative overflow-hidden transition transform p-4 cursor-pointer hover:backdrop-invert hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none`}
+      className={`${no_border ? "" : "border border-(--primary) hover:border-(--primary_inverse)"}
+        relative overflow-hidden transition transform p-4 cursor-pointer motion-reduce:transition-none motion-reduce:hover:transform-none
+        hover:text-(--secondary_inverse) hover:backdrop-invert hover:backdrop-saturate-10 hover:backdrop-brightness-150 hover:-translate-y-1
+        backdrop-blur-xs backdrop-saturate-110 hover:backdrop-blur-none`}
       onMouseEnter={() => setBlurBackground(false)}
       onMouseLeave={() => setBlurBackground(true)}
       >
@@ -127,12 +115,11 @@ export default function RepositoryCard({ repo, className = "", no_border, onClic
               className="w-10 h-10 rounded-full border"
             />
             <div>
-              <h3 className="font-semibold text-gray-900 dark:text-white text-lg">
+              <h3 className="font-bold text-lg">
                 <a 
                   href={repoData.html_url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="transition-colors"
                 >
                   {repoData.full_name}
                 </a>
@@ -147,25 +134,16 @@ export default function RepositoryCard({ repo, className = "", no_border, onClic
           {repoData.description || 'No description provided'}
         </p>
 
-
-
         {/* Footer */}
         <div className="flex items-center justify-between pt-4">
 
         {/* Stats */}
-          <div className="flex items-center">
+          {/* <div className="flex items-center">
             <svg className="w-5 h-5 mr-1.5" fill="currentColor" viewBox="0 0 20 20">
               <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
             </svg>
             <span className="font-medium">{repoData.stargazers_count.toLocaleString()}</span>
-          </div>
-
-          <div className="flex items-center">
-            <svg className="w-5 h-5 mr-1.5" fill="currentColor" viewBox="0 0 20 20">
-              <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
-            </svg>
-            <span className="font-medium">{repoData.forks_count.toLocaleString()}</span>
-          </div>
+          </div> */}
 
           {repoData.language && (
             <div className="flex items-center">
