@@ -28,7 +28,7 @@ async function getRepoData(repo: string): Promise<GitHubRepoData | null> {
     const response = await fetch(`https://api.github.com/repos/${repo}`, {
       // Force cache for static generation
       cache: 'force-cache',
-      // Optional: Add headers for GitHub API if you have a token
+      // if there's a GitHub API, add to headers
       headers: process.env.GITHUB_TOKEN ? {
         Authorization: `token ${process.env.GITHUB_TOKEN}`,
       } : {},
