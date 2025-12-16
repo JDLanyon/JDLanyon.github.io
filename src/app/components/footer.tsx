@@ -1,8 +1,7 @@
 "use client"
 
 import "@/app/globals.css";
-import Image from "next/image";
-import ColouredIcon from "./coloured_icon";
+import { ColouredIcon } from "./icons";
 
 export default function Footer() {
   return (

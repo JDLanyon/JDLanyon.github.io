@@ -1,6 +1,4 @@
 import { Metadata } from 'next';
-import GitHubRepoCard from '@/app/components/GitHubRepoCard';
-import StaticGitHubRepoCard from '@/app/components/StaticGitHubRepoCard';
 import RepositoryCard from './repo_card';
 
 // Define the type for repository data

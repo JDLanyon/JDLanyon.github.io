@@ -1,7 +1,5 @@
 'use client'
 
-import { useRouter } from 'next/navigation'
-import Image from "next/image";
 import Link from 'next/link'
 import "../globals.css";
 import { useHover } from '@/app/utilities/hover_context';
@@ -99,10 +97,16 @@ export default function RepositoryCard({ repo, className = "", no_border, onClic
 
   return (
     <Link 
-      className={`${no_border ? "" : "grid min-h-16 p-4 relative z-10 border border-(--primary) hover:border-(--primary_inverse)"}
-        relative overflow-hidden transition transform cursor-pointer motion-reduce:transition-none motion-reduce:hover:transform-none
-        hover:text-(--secondary_inverse) hover:backdrop-invert hover:backdrop-brightness-150 hover:-translate-y-1
-        backdrop-blur-none hover:backdrop-blur-xs`}
+      className={`${no_border ? "" : "border border-(--secondary) text-(--secondary)"}
+        grid min-h-16 p-4 relative z-10 overflow-hidden transition transform cursor-pointer motion-reduce:transition-none motion-reduce:hover:transform-none
+        hover:backdrop-invert hover:text-(--primary) hover:border-(--background) hover:drop-shadow-2xl hover:backdrop-saturate-10 hover:backdrop-brightness-150 hover:-translate-y-1
+        backdrop-brightness-95 backdrop-blur-none hover:backdrop-blur-sm`}
+
+      // className={`min-h-16 py-4 z-10 gap-4 ${no_border ? "" : highlight ? "border-2 border-(--secondary)" : "border border-(--primary)"}
+      //   flex items-center justify-center relative overflow-hidden transition transform cursor-pointer
+      //   ${highlight ? "py-8 text-xl! text-(--secondary)" : ""} motion-reduce:transition-none motion-reduce:hover:transform-none
+      //   hover:backdrop-invert hover:border-(--background) hover:drop-shadow-2xl hover:backdrop-saturate-10 hover:backdrop-brightness-150 hover:-translate-y-1
+      //   backdrop-blur-none hover:backdrop-blur-sm`}
       onMouseEnter={() => setBlurBackground(false)}
       onMouseLeave={() => setBlurBackground(true)}
       href={repoData.html_url}
@@ -111,7 +115,7 @@ export default function RepositoryCard({ repo, className = "", no_border, onClic
       >
       {/* Header */}
       <div className="flex items-start justify-between pb-4">
-        <div className="flex items-center space-x-3">
+        <div className="flex text-left space-x-3">
           <img
             src={repoData.owner.avatar_url}
             alt={`${repoData.owner.login}'s avatar`}

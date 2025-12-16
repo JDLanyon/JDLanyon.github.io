@@ -27,6 +27,7 @@ export const setColours = (colors: Array<{ hex: string }>) => {
 };
 
   // Extract colors from image
+  // TODO: improve readability
 export const extractColoursFromImage = async (image: string) => {
   try {
     const colors = await extractColors(image, {
