@@ -1,0 +1,120 @@
+/* resume-print.css — ATS-safe PDF export for resume
+   Used by pandoc/weasyprint when generating resume.pdf
+   Monochrome: #eee bg, #111 text — sausytime aesthetic, ATS-compatible */
+
+@page {
+  size: A4;
+  margin: 1.2cm 2cm;
+  background: #eee;
+}
+
+body {
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 9pt;
+  line-height: 1.25;
+  color: #111;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+  page-break-after: avoid;
+  /* margin-bottom: 2pt; */
+  margin: 4pt 0;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.4em;
+  font-weight: 700;
+}
+
+h1 + p {
+  text-align: center;
+  margin-bottom: 2pt;
+}
+
+h1 + p + p {
+  text-align: center;
+  margin-bottom: 8pt;
+}
+
+h2 {
+  font-size: 1.5em;
+  /* letter-spacing: 1.25px; */
+}
+
+/* Project block – keep title, bold description, tech stack together */
+h3 {
+  font-size: 1.25em;
+  page-break-after: avoid;
+}
+
+/* Bold description – first paragraph after h3 */
+h3 + p {
+  page-break-after: avoid;   /* don't break after this */
+  page-break-before: avoid;  /* don't break before this (stay with h3) */
+  margin: 2pt 0;           /* tight but not zero */
+}
+
+/* Tech stack – second paragraph after h3 */
+h3 + p + p {
+  page-break-before: avoid;  /* don't break before this (stay with bold) */
+  page-break-after: avoid;   /* also don't break after this (if a list follows) */
+  margin: 2pt 0;           /* space before the following list */
+}
+
+/* Style the tech stack text */
+h3 + p + p em {
+  font-size: 8pt;
+  color: #888;
+  font-style: normal;
+  display: block;
+}
+
+ul {
+  margin-bottom: 2pt;
+  padding-left: 14pt;
+}
+
+li {
+  margin-bottom: 2pt;
+  orphans: 2;
+  widows: 2;
+}
+
+strong {
+  color: #111;
+}
+
+a, p {
+  color: #111;
+  text-decoration: none;
+  margin: 2pt 0;
+}
+
+hr {
+  border: none;
+  border-bottom: 1px solid #555;
+  margin: 6pt 0;
+}
+
+blockquote {
+  margin: 2pt 0;
+  padding: 0;
+  border: none;
+}
+
+small {
+  font-size: 7.5pt;
+  color: #888;
+  display: block;
+  margin-top: 8pt;
+}
+
+.no-print, .title, .author {
+  display: none !important;
+}
+/* Force a page break */
+.page-break {
+  page-break-before: always;
+}
