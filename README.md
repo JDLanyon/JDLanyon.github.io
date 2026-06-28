@@ -50,7 +50,7 @@ npm run preview    # preview the production build
 
 - **Custom glitch components:** three-tier glitch system (`GlitchText`, `GlitchImage`, `GlitchLink`) with chromatic aberration (RGB + CMY), seeded PRNG for SSR safety, and CSS-only variants. All markdown `[text](url)` links are auto-converted to `<GlitchLink>` at build time via a markdown-it plugin.
 - **Project README fetching** - project detail modals and full pages pull content directly from GitHub repository READMEs at build time.
-- **CI/CD pipeline** - GitHub Actions builds the site and deploys to GitHub Pages in ~2 minutes fully automatically.
+- **CI/CD pipeline** - GitHub Actions builds the site and deploys to Cloudflare Pages in ~2 minutes fully automatically.
 - **Monochromatic theme** - Light and Dark modes via CSS custom properties. Minimal, intentional, high contrast.
 - **Wiki-style links** - `[[slug]]` syntax (like Obsidian Notes) creates internal links using `<GlitchLink>` at build time via `scripts/glitch-link-plugin.mjs`.
 
@@ -97,7 +97,7 @@ npm run preview    # preview the production build
 │   ├── glitch-link-plugin.mjs # markdown-it plugin: [text](url) → <GlitchLink>
 │   └── wiki-link-plugin.mjs  # markdown-it plugin: [[slug]] → wiki links
 ├── .github/workflows/
-│       └── deploy.yml    # build site, deploy to gh-pages
+│       └── deploy.yml    # build site, deploy to Cloudflare's edge network
 ├── package.json
 ├── tsconfig.json
 ├── LICENSE.md
@@ -150,10 +150,10 @@ The design is intentionally monochromatic, colour is reserved for the glitch eff
 Pushing to `main` triggers a fully automated pipeline (~2 minutes):
 
 ```
-npm ci → fetch project READMEs → vitepress build → deploy to GitHub Pages
+npm ci → fetch project READMEs → vitepress build → deploy to Cloudflare Pages
 ```
 
-No manual steps, no hosting configuration. The site is served statically from `gh-pages` with zero runtime dependencies.
+No manual steps, no hosting configuration. The site is served statically from `Cloudflare's edge network` with zero runtime dependencies.
 
 
 ### Also check out

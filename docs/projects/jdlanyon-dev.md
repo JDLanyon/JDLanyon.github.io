@@ -1,6 +1,6 @@
 ---
 title: jdlanyon.dev — Programmer Portfolio
-date: "Jul 2025"
+date: "Jun 2026"
 description: Project detail page
 tags: ["VitePress", "Vue", "TypeScript", "GitHub Actions", "Markdown"]
 repo: https://github.com/JDLanyon/JDLanyon.github.io

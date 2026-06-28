@@ -8,7 +8,9 @@
     "build": "node scripts/fetch-readmes.mjs && vitepress build docs && node scripts/cleanup-auto.mjs",
     "preview": "vitepress preview docs",
     "sync:blog": "bash scripts/sync-obsidian.sh",
-    "deploy": "npm run build && npx gh-pages -d docs/.vitepress/dist"
+    "deploy": "npm run build && npx gh-pages -d docs/.vitepress/dist",
+    "deploy:cf": "node scripts/fetch-readmes.mjs && vitepress build docs && node scripts/cleanup-auto.mjs && npx wrangler pages deploy docs/.vitepress/dist --project-name=jdlanyon-dev",
+    "deploy:gh": "npm run build && npx gh-pages -d docs/.vitepress/dist"
   },
   "devDependencies": {
     "vitepress": "^1.6.4",

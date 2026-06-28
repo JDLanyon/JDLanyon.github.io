@@ -8,7 +8,6 @@ pnpm-debug.log*
 lerna-debug.log*
 
 node_modules
-dist
 dist-ssr
 *.local
 
@@ -24,7 +23,8 @@ dist-ssr
 *.sw?
 
 # VitePress build output
-docs/.vitepress/dist
+docs/.vitepress/dist/*
+!docs/.vitepress/dist/JDLanyon_Resume.pdf
 
 # Obsidian configs folder
 docs/.obsidian/
@@ -37,3 +37,6 @@ docs/.vitepress/cache/auto-projects/
 
 # Agents file (mine lol)
 AGENTS.md
+# Cloudflare Wrangler
+.wrangler/
+
