@@ -22,8 +22,6 @@
 
 ## Automatically Fetched
 
-[[igb200]]
-[[mates-rates-rent-a-car]]
 [[forza-winners-record]]
 [[advent-of-code-2025]]
 [[sad-discord-bot]]

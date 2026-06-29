@@ -22,10 +22,6 @@ dist-ssr
 *.sln
 *.sw?
 
-# VitePress build output
-docs/.vitepress/dist/*
-!docs/.vitepress/dist/JDLanyon_Resume.pdf
-
 # Obsidian configs folder
 docs/.obsidian/
 
@@ -35,8 +31,15 @@ scripts/*.log
 # Auto-discovered GitHub readmes (build artifacts)
 docs/.vitepress/cache/auto-projects/
 
-# Agents file (mine lol)
-AGENTS.md
+# VitePress cache and distribution folders (build artifacts)
+docs/.vitepress/cache/
+# VitePress build output
+docs/.vitepress/dist/
+!docs/.vitepress/dist/JDLanyon_Resume.pdf
+
+# Environment variables
+.env
+
 # Cloudflare Wrangler
 .wrangler/
 

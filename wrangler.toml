@@ -1,3 +1,3 @@
 name = "jdlanyon-dev"
 pages_build_output_dir = "docs/.vitepress/dist"
-pages_build_command = "node scripts/fetch-readmes.mjs && vitepress build docs && node scripts/cleanup-auto.mjs"
+

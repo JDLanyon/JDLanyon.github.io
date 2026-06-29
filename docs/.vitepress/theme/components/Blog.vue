@@ -90,12 +90,10 @@ const latestPosts = computed(() => allPosts.slice(0, LATEST_COUNT))
 
 //  Nested category tree
 
-//
-//  Walk the remaining posts (after LATEST_COUNT) and build a nested tree
+// Walk the remaining posts (after LATEST_COUNT) and build a nested tree
 //  where each level corresponds to a folder-segment in the post URL.
 //  /blog/webdev/css/grid_layouts: segments: ["webdev", "css"]
 //  /blog/hello-world: segments: [] -> ["General"]
-//
 const categoryTree = computed(() => {
   const remaining = allPosts.slice(LATEST_COUNT)
   const root: TreeNode[] = []
