@@ -1,7 +1,7 @@
 import DefaultTheme from 'vitepress/theme'
 import './custom.css'
 
-// Custom layout wrapper — adds BackToTop button before footer
+// Custom layout wrapper - adds BackToTop button before footer
 import CustomLayout from './Layout.vue'
 
 import GlitchText from './components/GlitchText.vue'

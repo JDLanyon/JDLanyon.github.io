@@ -67,7 +67,7 @@ export async function writeProject({ slug, title, description, repo, tags, url =
   const baseUrl = readmeBaseUrl(repo);
   if (!baseUrl) return { log: `${prefix} ⚠  ${slug}: could not parse repo URL`, slug };
 
-  // Fetch README — try main branch first, then master
+  // Fetch README - try main branch first, then master
   let body = null;
   for (const branch of ["main", "master"]) {
     try {

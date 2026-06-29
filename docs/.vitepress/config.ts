@@ -18,10 +18,10 @@ export default defineConfig({
 
   head: [
     ['link', { rel: 'icon', href: '/lotus.png', type: 'image/png' }],
-    ['meta', { property: 'og:title', content: 'Jackson Lanyon — Software Engineer' }],
+    ['meta', { property: 'og:title', content: 'Jackson Lanyon - Software Engineer' }],
     ['meta', { property: 'og:description', content: 'Python, C#, React, creative coding. Building systems that scale.' }],
     ['meta', { name: 'theme-color', content: '#111111' }],
-    ['meta', { property: 'og:image', content: '/social-preview.png' }],
+    ['meta', { property: 'og:image', content: '/lotus.png' }],
   ],
 
   themeConfig: {
@@ -51,7 +51,7 @@ export default defineConfig({
     ],
 
     footer: {
-      message: 'Built with VitePress · Static · Minimal · Intentional',
+      message: 'Built with VitePress - Static, Minimal and Intentional',
       copyright: `© ${new Date().getFullYear()} Jackson Lanyon`,
     },
   },

@@ -1,6 +1,6 @@
-/* resume-print.css — ATS-safe PDF export for resume
+/* resume-print.css - ATS-safe PDF export for resume
    Used by pandoc/weasyprint when generating resume.pdf
-   Monochrome: #eee bg, #111 text — sausytime aesthetic, ATS-compatible */
+   Monochrome: #eee bg, #111 text - sausytime aesthetic, ATS-compatible */
 
 @page {
   size: A4;

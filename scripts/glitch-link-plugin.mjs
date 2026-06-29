@@ -36,7 +36,7 @@ export function glitchLinkPlugin(md) {
     if (href.startsWith('mailto:')) {
       return defaultRender(tokens, idx, options, env, self);
     }
-    // Build GlitchLink component — the link_close will close it
+    // Build GlitchLink component - the link_close will close it
     return `<GlitchLink href="${href.replace(/"/g, '&quot;')}">`;
   };
 

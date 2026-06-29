@@ -4,7 +4,7 @@ declare module '*.vue' {
   export default component
 }
 
-// VitePress data loaders (.data.ts) — processed at build time.
+// VitePress data loaders (.data.ts) - processed at build time.
 // The 'data' named export is injected by VitePress at build time from the default export.
 declare module '*.data' {
   import type { ContentData } from 'vitepress'

@@ -17,7 +17,7 @@
     >View Live</GlitchLink>
   </Card>
 
-    <!-- Modal instance — one per card, triggered on click -->
+    <!-- Modal instance - one per card, triggered on click -->
     <ProjectDetailModal
       v-if="showModal"
       :slug="slug"

@@ -1,5 +1,5 @@
 ---
-title: Task Tank — Gamified Task Manager
+title: Task Tank - Gamified Task Manager
 description: Project detail page
 tags: ["Java", "JavaFX", "SQLite"]
 embed_ids: ["nZdhINf1foU"]
@@ -8,26 +8,26 @@ repo: https://github.com/OvercaffeinatedCAB302/fish-tank
 
 <ProjectFullPage>
 
-# Task Tank — Gamified Task Manager
+# Task Tank - Gamified Task Manager
 
-**Task Tank** is a cross-platform productivity-focused study application developed by a team of 6 as part of CAB302 — Software Development at Queensland University of Technology (QUT). The project turns task management into an engaging experience by combining a Pomodoro study timer, task tracking, and a virtual fish tank where completing work earns in-game rewards.
+**Task Tank** is a cross-platform productivity-focused study application developed by a team of 6 as part of CAB302 - Software Development at Queensland University of Technology (QUT). The project turns task management into an engaging experience by combining a Pomodoro study timer, task tracking, and a virtual fish tank where completing work earns in-game rewards.
 
-> *"Being students ourselves — we've all got heaps to do, and procrastination is always a thing we struggle with. Other to-do apps can be overly complex or feel like work, so we wanted something that makes you want to come back."*
+> *"Being students ourselves - we've all got heaps to do, and procrastination is always a thing we struggle with. Other to-do apps can be overly complex or feel like work, so we wanted something that makes you want to come back."*
 
 ## Core Features
 
-- **Pomodoro Study Timer** — Customizable segment durations with health reminders, sound effects, and points earned upon session completion
-- **Task Tracking** — Add, delete, edit tasks; mark tasks as priority and sort by priority level; earn points upon task completion
-- **In-game Store & Tank** — Purchase fish and decorations for your tank; animated fish and decorations with real-time rendering
-- **User Accounts** — Local SQL database with password hashing for secure profile persistence
+- **Pomodoro Study Timer** - Customizable segment durations with health reminders, sound effects, and points earned upon session completion
+- **Task Tracking** - Add, delete, edit tasks; mark tasks as priority and sort by priority level; earn points upon task completion
+- **In-game Store & Tank** - Purchase fish and decorations for your tank; animated fish and decorations with real-time rendering
+- **User Accounts** - Local SQL database with password hashing for secure profile persistence
 
 ## Technical Architecture
 
-- **DAO Factory Pattern** — Instantiates complex objects cleanly, separating data handling from business logic
-- **Singleton Methods** — Tracks singular instances such as the SQLite connection
-- **Data Access Objects (DAO)** — Decouples data persistence from application logic
-- **OOP Principles** — Inheritance, polymorphism, interfaces, and encapsulation ensure scalable and modular development
-- **JavaFX FXML** — UI written in `.fxml` for clean separation of layout and logic
+- **DAO Factory Pattern** - Instantiates complex objects cleanly, separating data handling from business logic
+- **Singleton Methods** - Tracks singular instances such as the SQLite connection
+- **Data Access Objects (DAO)** - Decouples data persistence from application logic
+- **OOP Principles** - Inheritance, polymorphism, interfaces, and encapsulation ensure scalable and modular development
+- **JavaFX FXML** - UI written in `.fxml` for clean separation of layout and logic
 
 ## Built With
 
@@ -43,11 +43,11 @@ repo: https://github.com/OvercaffeinatedCAB302/fish-tank
 ## Project Management
 
 The team used an industry-standard workflow including:
-- **GitHub Projects** — Kanban-style project management with sprint planning
-- **Discord** — Daily stand-ups and asynchronous communication
-- **Notion** — Meeting minutes and development progress logs
-- **when2meet** — Scheduling team availabilities
-- **Canva** — Project presentation materials
+- **GitHub Projects** - Kanban-style project management with sprint planning
+- **Discord** - Daily stand-ups and asynchronous communication
+- **Notion** - Meeting minutes and development progress logs
+- **when2meet** - Scheduling team availabilities
+- **Canva** - Project presentation materials
 
 <YouTubeEmbeds />
 

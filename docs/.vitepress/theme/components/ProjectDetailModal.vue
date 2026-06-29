@@ -86,7 +86,7 @@ async function loadContent() {
     const bodyEl = doc.querySelector('.project-fullpage-body')
     if (bodyEl) {
       content.value = bodyEl.innerHTML
-        // Strip GlitchLink wrappers — Vue components don't hydrate in v-html
+        // Strip GlitchLink wrappers - Vue components don't hydrate in v-html
         .replace(/<\/?GlitchLink[^>]*>/g, '')
         // Strip YouTubeEmbeds component tag (handled below if needed)
         .replace(/<YouTubeEmbeds\s*\/>/g, '')

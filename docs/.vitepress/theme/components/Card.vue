@@ -4,7 +4,7 @@ Provides consistent card styling (border, hover, head/title/date/desc/tags layou
 Uses a renderless pattern – the parent passes action/click behaviour via card wrapper.
 Props: title, date?, description?, tags?
 
-Emits: click — forwarded from the card's own @click handler
+Emits: click - forwarded from the card's own @click handler
 -->
 <template>
   <div

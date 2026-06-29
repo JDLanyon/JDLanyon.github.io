@@ -30,10 +30,10 @@ export async function fetchUserRepos(githubToken, user) {
     const headers = { Accept: "application/vnd.github.v3+json", "User-Agent": "jdlanyon-dev-fetch" };
     if (githubToken) headers.Authorization = `Bearer ${githubToken}`;
     const res = await fetch(url, { headers });
-    if (!res.ok) { console.warn(`  ⚠  GitHub API returned ${res.status} — auto-discovery skipped`); return []; }
+    if (!res.ok) { console.warn(`  ⚠  GitHub API returned ${res.status} - auto-discovery skipped`); return []; }
     return await res.json();
   } catch (err) {
-    console.warn(`  ⚠  Could not fetch repos — auto-discovery skipped (${err.message})`);
+    console.warn(`  ⚠  Could not fetch repos - auto-discovery skipped (${err.message})`);
     return [];
   }
 }

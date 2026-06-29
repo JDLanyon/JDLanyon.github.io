@@ -9,7 +9,7 @@
           <span class="glitch-text" v-else>{{ text }}</span>
         </span>
 
-        <!-- Effects — only during glitch -->
+        <!-- Effects - only during glitch -->
         <template v-if="phase !== 'idle'">
           <span
             v-for="(layer, i) in chromaLayers"

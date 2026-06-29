@@ -1,7 +1,7 @@
 <!-- ProjectFullPage.vue
   Full-page layout for project details at /projects/:slug.
   Reads repo, date, and url from page frontmatter via useData().
-  No prop needed — just wrap markdown content with <ProjectFullPage>.
+  No prop needed - just wrap markdown content with <ProjectFullPage>.
 -->
 <template>
   <div class="page-root">

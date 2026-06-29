@@ -2,7 +2,7 @@
 A styled link that plays a CSS-animated glitch effect (chromatic aberration + shake + motion blur) on hover.
 Uses RGB & CMY colours with screen/difference blend modes.
 Props: href, text (fallback if no slot), cooldown (ms between triggers).
-Slot: default — inner link content (e.g. markdown link text). -->
+Slot: default - inner link content (e.g. markdown link text). -->
 <template>
   <a
     :href="href"

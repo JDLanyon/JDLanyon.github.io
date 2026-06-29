@@ -40,9 +40,9 @@ segments. Supports arbitrary nesting depth (h2 through h6).
 </template>
 
 <script setup lang="ts">
-// @ts-expect-error — VitePress injects the `data` named export at build time
+// @ts-expect-error - VitePress injects the `data` named export at build time
 import { data as allPosts } from './blog.data'
-// @ts-ignore — duplicates across <script> blocks; Vue separates them at build time
+// @ts-ignore - duplicates across <script> blocks; Vue separates them at build time
 import type { PostData } from './blog.data'
 import { computed } from 'vue'
 
@@ -123,7 +123,7 @@ const categoryTree = computed(() => {
     })
   }
 
-  // Recursively sort sibling nodes — folders first (alphabetically),
+  // Recursively sort sibling nodes - folders first (alphabetically),
   // then leaf posts (alphabetically).
   function sortTree(nodes: TreeNode[]) {
     // Folders (has children) sort before leaves (no children)
@@ -143,7 +143,7 @@ const categoryTree = computed(() => {
 </script>
 
 <script lang="ts">
-// CategoryTree Component — Render-Function (JSX-free)
+// CategoryTree Component - Render-Function (JSX-free)
 
 // This is a separate <script lang="ts"> block (Vue 3 supports
 // multiple script blocks). It defines ONLY the CategoryTree
@@ -186,7 +186,7 @@ function formatDate(dateStr: string | Date): string {
 // Once we reach h6 we stay there (clamp via Math.min).
 const HEADING_TAGS = ['h2', 'h3', 'h4', 'h5', 'h6'] as const
 
-// renderPost — creates a VNode tree for a single PostData object, using BlogCard
+// renderPost - creates a VNode tree for a single PostData object, using BlogCard
 function renderPost(post: PostData): VNode {
   // Vue's hyperscript - creates virtual DOM nodes
   return h(BlogCard as any, {
@@ -198,11 +198,11 @@ function renderPost(post: PostData): VNode {
   })
 }
 
-// CategoryTree — recursive render-function component
+// CategoryTree - recursive render-function component
 
 // Props:
-//   nodes : TreeNode[]   — sibling nodes at the current depth
-//   depth : number       — current nesting level (0 = root)
+//   nodes : TreeNode[]   - sibling nodes at the current depth
+//   depth : number       - current nesting level (0 = root)
 
 // The render function loops over each node and decides:
 //   - If it's a **leaf** (has posts, no children), render the post directly.

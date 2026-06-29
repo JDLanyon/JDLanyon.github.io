@@ -6,7 +6,7 @@
  *
  * Metadata comes from docs/projects/*.md frontmatter.
  *
- * This plugin only runs during the VitePress build — your
+ * This plugin only runs during the VitePress build - your
  * Obsidian notes keep clean [[wiki-link]] syntax untouched.
  *
  * Usage in docs/.vitepress/config.ts:

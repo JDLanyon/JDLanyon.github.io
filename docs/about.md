@@ -4,7 +4,7 @@ I build software that looks as good as it runs. Most engineers focus on logic, I
 
 ## What I Do
 
-- **Backend & Automation** — Python, C#, SQL, Docker, Linux Systemd
+- **Backend & Automation** - Python, C#, SQL, Docker, Linux Systemd
 - **Web Development** - React, Next.js, Vue, Vite, TypeScript
 - **Creative Coding** - Godot, Unity, Frontend, Lua, Motion Graphics
 - **Infrastructure** - Linux servers, Cloudflare, Nginx, GitHub Actions

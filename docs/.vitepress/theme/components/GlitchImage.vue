@@ -20,7 +20,7 @@
           <slot />
         </span>
 
-        <!-- Effects — only rendered during glitch -->
+        <!-- Effects - only rendered during glitch -->
         <template v-if="phase !== 'idle'">
           <!-- Chromatic aberration layers (6 colors) -->
           <span
@@ -72,7 +72,7 @@ const shakeY = ref(0)
 const displaceX = ref(0)
 const displaceY = ref(0)
 
-// Seeded PRNG — reseeded per glitch to avoid SSR/hydration mismatch
+// Seeded PRNG - reseeded per glitch to avoid SSR/hydration mismatch
 let seed = 0
 function reseed() { seed = Date.now() }
 function rand() {
@@ -147,7 +147,7 @@ function triggerGlitch() {
   phase.value = 'active'
   intensity.value = props.intensity
 
-  // Generate layers once using seeded PRNG (not in a computed — pure)
+  // Generate layers once using seeded PRNG (not in a computed - pure)
   chromaLayers.value = generateLayers()
 
   let startTime: number | null = null

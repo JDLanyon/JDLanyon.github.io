@@ -23,7 +23,7 @@ const CURATED_SECTIONS = new Set(SECTION_ORDER);
  */
 export function parseCuratedFromProjectsMd(projectsMdPath) {
   if (!fs.existsSync(projectsMdPath)) {
-    console.warn("  ⚠  docs/projects.md not found — no curated projects defined");
+    console.warn("  ⚠  docs/projects.md not found - no curated projects defined");
     return { curated: [], autoSlugs: [] };
   }
 

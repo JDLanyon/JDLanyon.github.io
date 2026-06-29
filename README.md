@@ -114,8 +114,8 @@ npm run preview    # preview the production build
 | `<GlitchLink>` | CSS keyframe glitch on hover - RGB + CMY layers with screen/difference blend modes. No JS animation overhead. |
 | `<TypeWriter>` | Rotating typewriter headings - character-by-character typing, word-by-word deletion, ghost text preview, blinking cursor. |
 | `<Button>` | Reusable blocky button with `href`, `primary`, `arrow`, `disabled` props. |
-| `<Card>` | Shared card shell used by BlogCard and ProjectCard — title, date, description, tags, slot. |
-| `<BlogCard>` | Clickable blog post card — wraps Card with router navigation. |
+| `<Card>` | Shared card shell used by BlogCard and ProjectCard - title, date, description, tags, slot. |
+| `<BlogCard>` | Clickable blog post card - wraps Card with router navigation. |
 | `<ProjectCard>` | Clickable card that opens a detail modal to display fetched README content. |
 | `<ProjectDetailModal>` | Teleported modal that fetches project HTML and extracts content. Falls back from clean URLs to `.html` for static deploy compatibility. |
 | `<ProjectFullPage>` | Standalone full-page layout for direct URL visits to `/projects/:slug`. |

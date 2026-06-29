@@ -7,19 +7,19 @@
  * VitePress-routable pages.
  *
  * Two sources:
- *   1. CURATED — projects listed under known section headings in docs/projects.md
+ *   1. CURATED - projects listed under known section headings in docs/projects.md
  *      → existing files at docs/projects/{slug}.md are never overwritten
- *   2. AUTO-DISCOVERED — public repos on GitHub not otherwise covered
+ *   2. AUTO-DISCOVERED - public repos on GitHub not otherwise covered
  *      → written to cache dir, then promoted to docs/projects/ for routing
  *      → caller (package.json script) should run cleanup-auto.mjs after build
  *
  * Priority: local markdown in docs/projects/ > fetched README > fallback
  *
  * Modules:
- *   lib/github.js          — fetchUserRepos, fetchLatestCommitDate, readmeBaseUrl
- *   lib/projects-md.js     — parseCuratedFromProjectsMd, generateProjectsPage
- *   lib/frontmatter.js     — buildFrontmatter, stripExistingFrontmatter, resolveRelativePaths
- *   lib/project-writer.js  — writeProject, promoteAutoFiles, slugFromRepoName, titleFromRepoName
+ *   lib/github.js          - fetchUserRepos, fetchLatestCommitDate, readmeBaseUrl
+ *   lib/projects-md.js     - parseCuratedFromProjectsMd, generateProjectsPage
+ *   lib/frontmatter.js     - buildFrontmatter, stripExistingFrontmatter, resolveRelativePaths
+ *   lib/project-writer.js  - writeProject, promoteAutoFiles, slugFromRepoName, titleFromRepoName
  */
 
 import fs from "fs";
@@ -84,7 +84,7 @@ fs.mkdirSync(PROJECTS_DIR, { recursive: true });
 
 const repos = await fetchUserRepos(GITHUB_TOKEN, GITHUB_USER);
 
-//Phase 2: Curated — verify files exist, inject date into frontmatter
+//Phase 2: Curated - verify files exist, inject date into frontmatter
 
 for (const { slug } of curated) {
   const outPath = path.join(PROJECTS_DIR, `${slug}.md`);
@@ -126,7 +126,7 @@ for (const { slug } of curated) {
   }
 }
 
-//Phase 3: Auto-discover — only for repos without an existing curated page
+//Phase 3: Auto-discover - only for repos without an existing curated page
 
 fs.mkdirSync(AUTO_CACHE_DIR, { recursive: true });
 fs.readdirSync(AUTO_CACHE_DIR).forEach(f => {

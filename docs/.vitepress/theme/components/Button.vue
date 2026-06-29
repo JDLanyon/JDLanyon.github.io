@@ -8,7 +8,7 @@
     download - boolean|string - Download attribute (true or filename).
     disabled - boolean - Renders as a non-interactive <span> with muted styles.
 
-  Slot: default — button text or inline content.
+  Slot: default - button text or inline content.
 -->
 <template>
   <span
