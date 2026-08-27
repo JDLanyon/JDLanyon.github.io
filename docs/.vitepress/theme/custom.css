@@ -35,6 +35,10 @@ h4 { font-size: 1.563rem; }
 h5 { font-size: 1.25rem; }
 h6 { font-size: 1rem; }
 
+/* don't display print only documents */
+.print-only {
+  display: none !important;
+}
 .content a:not(.header-anchor):not(.glitch-link):not(.VPSocialLink):not(.no-icon) {
   position: relative;
   display: inline-block;
@@ -152,6 +156,51 @@ th { background: var(--vp-c-bg-elv); }
 
 hr { border-color: var(--border-color); }
 .subtle { color: var(--secondary); }
+
+/* Contact page - methods panel */
+.contact-methods {
+  border: 1px solid var(--border-color);
+  background: var(--vp-c-bg-soft);
+  padding: 1.25rem 1.5rem;
+  margin: 1rem 0 1.5rem;
+}
+.contact-methods a { text-underline-offset: 2px; }
+.contact-methods .btn {
+  display: inline-flex;
+  margin: 0.5rem 0 0;
+}
+
+/* Shared modal header buttons (rendered via slots, so scoped styles in Modal.vue don't reach them) */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  background: transparent;
+  border: 1px solid var(--vp-c-border);
+  color: var(--vp-c-text-1);
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.15s, color 0.15s;
+}
+.modal-btn:hover {
+  background: var(--vp-c-text-1);
+  color: var(--vp-c-bg);
+}
+.modal-btn-disabled {
+  opacity: 0.45;
+  cursor: default;
+  pointer-events: none;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 0.8rem;
+}
+.modal-btn-disabled:hover {
+  background: transparent;
+  color: var(--vp-c-text-1);
+}
+
 .VPNavBar .VPNavBarTitle .logo {
   filter: invert(var(--lotus-invert));
   transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
@@ -165,9 +214,26 @@ hr { border-color: var(--border-color); }
 ::-webkit-scrollbar-thumb { background: var(--border-color); border-radius: 3px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--secondary); }
 
-._resume { max-width: min(60vw, 56rem); margin: 0 auto; padding: 2rem 1rem 4rem; }
-._resume h2 { font-size: 1rem; text-transform: uppercase; letter-spacing: 0.08em; border-bottom: 2px solid var(--primary); padding-bottom: 0.25rem; margin-top: 1.5rem; margin-bottom: 0.75rem; }
+.vp-doc._resume { padding: 2rem 1rem 4rem; }
+
+/* Resume contact links — flex row spread across the full content width (screen) */
+._resume .resume-links,
+.vp-doc .resume-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem 1.5rem;
+  margin: 0.5rem 0 1.5rem;
+}
+
 ._resume h3 { font-size: 1rem; margin-top: 1.25rem; margin-bottom: 0.15rem; }
+/* Resume header block: centered name/title/location without borders or case changes */
+._resume .vp-doc h2, ._resume h2 {
+  text-transform: none;
+  border-top: none;
+  padding-top: 0;
+}
 ._resume h3 + em, ._resume h3 + p em { font-size: 0.8rem; color: var(--secondary); font-style: normal; display: block; margin-bottom: 0.25rem; }
 ._resume li { margin-bottom: 0.3rem; line-height: 1.55; }
 ._resume blockquote a { font-weight: normal; font-size: 0.85rem; border: 1px solid var(--border-color); padding: 0.3rem 0.8rem; transition: all 0.15s; }
@@ -176,7 +242,27 @@ hr { border-color: var(--border-color); }
 
 @media print {
   .VPNavBar, .VPFooter, .VPLocalNav, .VPSidebar, .VPNavScreen, .back-to-top { display: none !important; }
-  ._resume { max-width: 100%; padding: 0; }
-  ._resume h2, ._resume h3 { page-break-after: avoid; }
-  ._resume li { orphans: 2; widows: 2; }
+  /* Resume print: hide on-screen GlitchLinks (JS/CSS-only), show plain <a> row */
+  .no-print { display: none !important; }
+  .print-only { display: block !important; }
+  /* Borderless, full-width links row (table renders horizontally in print) */
+  .resume-links.print-only table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 4pt 0 8pt;
+  }
+  .resume-links.print-only table td {
+    border: none;
+    padding: 0 4pt;
+  }
+}
+
+/* docs/.vitepress/theme/custom.css */
+/* Kill the VitePress default heading divider that looks like an <hr>
+   between the hero name and subtitle on the home page */
+.hero-subtitle,
+.vp-doc h2.hero-subtitle {
+  border-top: none;
+  padding-top: 0;
+  margin-top: 0;
 }

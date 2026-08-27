@@ -2,12 +2,33 @@
   <a target="_blank" href="/JDLanyon_Resume.pdf" download class="btn-primary btn-scroll">Download PDF</a>
 </div>
 
-# Jackson Lanyon
-***Software Engineer - Brisbane, Australia***
+<div style="text-align: center;">
+  <h1>Jackson Lanyon</h1>
+  <h2>Software Engineer</h2>
+  <p><strong>Brisbane, Australia</strong></p>
+  <p class="print-only" style="padding-left: 16pt;"><strong>0401 532 009</strong></p>
+</div>
 
-[linkedin.com/in/jdlanyon](https://www.linkedin.com/in/jdlanyon/) - [github.com/JDLanyon](https://github.com/JDLanyon) - [jdlanyon.dev](https://jdlanyon.dev/) - [jlany9@hotmail.com](mailto:jlany9@hotmail.com)
-
----
+<!-- On-screen: glitch links spread across the full page width -->
+<div class="no-print resume-links">
+  <GlitchLink href="https://www.linkedin.com/in/jdlanyon/">linkedin.com/in/jdlanyon</GlitchLink>
+  <GlitchLink href="https://github.com/JDLanyon">github.com/JDLanyon</GlitchLink>
+  <GlitchLink href="https://jdlanyon.dev/">jdlanyon.dev</GlitchLink>
+  <GlitchLink href="mailto:jlany9@hotmail.com">jlany9@hotmail.com</GlitchLink>
+</div>
+<!-- PDF export: plain anchors (GlitchLink is JS/CSS-only and hidden in print).
+     Uses a table because WeasyPrint handles tables reliably (flexbox space-between
+     can collapse to a vertical stack in print engines). -->
+<div class="print-only resume-links">
+  <table>
+    <tr>
+      <td style="text-align: left;"><a href="https://www.linkedin.com/in/jdlanyon/">linkedin.com/in/jdlanyon</a></td>
+      <td style="text-align: center;"><a href="https://github.com/JDLanyon">github.com/JDLanyon</a></td>
+      <td style="text-align: center;"><a href="https://jdlanyon.dev/">jdlanyon.dev</a></td>
+      <td style="text-align: right;"><a href="mailto:jlany9@hotmail.com">jlany9@hotmail.com</a></td>
+    </tr>
+  </table>
+</div>
 
 ## Professional Summary
 Full-stack engineer with production experience in programming and motion graphics. I combine strong fundamentals in algorithms, databases, and system design with a motion designer's eye for visual polish, delivering software that's both functional and refined.
@@ -94,14 +115,18 @@ I focus on clean, testable, scalable code with automated deployments.
 **Minor:** Advanced Software Technologies
 **Minor:** Graphic Design
 
----
-
 ## References
 **Alexander Klimson**
+
 Engineering Manager - alexander.klimson@aqseptence.com
 
+<div class="print-only">0738 675 562</div>
+
 **Leighton Cook**
+
 Project Manager & Lead Developer - leightoncook45@gmail.com
+
+<div class="print-only">0490 107 486</div>
 
 <div class="no-print" style="text-align: right; margin-bottom: 1rem;">
 <small>Last updated: 2026 - <a target="_blank" href="https://github.com/JDLanyon/jdlanyon.dev/blob/main/docs/resume.md">View source on GitHub</a></small>

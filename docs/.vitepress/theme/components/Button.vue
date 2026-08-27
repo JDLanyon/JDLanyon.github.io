@@ -1,65 +1,59 @@
 <!-- Button.vue
   Reusable blocky button component that inverts colours on hover.
-  Used for CTAs, nav buttons, and page-action links across the site.
-
+  Always renders a <button>. Use `href` to navigate (via click handler) or
+  pass an `@click` to run arbitrary JS (e.g. copy-to-clipboard, open a modal).
+  In-app hrefs use VitePress's router; external http(s) hrefs open in a new tab.
   Props:
-    href     - string  - Link destination.
-    arrow    - string  - ('left'|'right'|'up'|'down') Appends arrow.
-    download - boolean|string - Download attribute (true or filename).
-    disabled - boolean - Renders as a non-interactive <span> with muted styles.
+    href  - string - If set, clicking navigates here (router-aware).
+    arrow - string - ('left'|'right'|'up'|'down') Appends an arrow glyph.
+    title - string - Native tooltip.
 
+  Emits: click (MouseEvent) - fired on every click, before navigation.
   Slot: default - button text or inline content.
 -->
 <template>
-  <span
-    v-if="disabled"
-    class="btn btn-disabled"
-    :title="title"
-  >
-    <span v-if="arrow === 'left'" class="btn-arrow">&larr;</span>
-    <span class="btn-text"><slot /></span>
-    <span v-if="arrow === 'right'" class="btn-arrow">&rarr;</span>
-    <span v-if="arrow === 'up'" class="btn-arrow">&uarr;</span>
-    <span v-if="arrow === 'down'" class="btn-arrow">&darr;</span>
-  </span>
-  <a
-    v-else
-    :href="href"
+  <button
+    type="button"
     class="btn"
-    :target="isExternal ? '_blank' : undefined"
-    :rel="isExternal ? 'noopener noreferrer' : undefined"
-    :download="downloadProp"
+    :title="title"
+    @click="handleClick"
   >
     <span v-if="arrow === 'left'" class="btn-arrow">&larr;</span>
     <span class="btn-text"><slot /></span>
     <span v-if="arrow === 'right'" class="btn-arrow">&rarr;</span>
     <span v-if="arrow === 'up'" class="btn-arrow">&uarr;</span>
     <span v-if="arrow === 'down'" class="btn-arrow">&darr;</span>
-  </a>
+  </button>
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
+import { useRouter } from 'vitepress'
 
 const props = withDefaults(defineProps<{
   href?: string
   arrow?: 'left' | 'right' | 'up' | 'down'
-  download?: boolean | string
-  disabled?: boolean
   title?: string
 }>(), {
-  href: '#',
+  href: '',
 })
 
-const isExternal = computed(() =>
-  props.href.startsWith('http://') || props.href.startsWith('https://')
-)
+const emit = defineEmits<{ click: [event: MouseEvent] }>()
 
-const downloadProp = computed(() => {
-  if (typeof props.download === 'string') return props.download
-  if (props.download === true) return ''
-  return undefined
-})
+const router = useRouter()
+
+function handleClick(event: MouseEvent) {
+  emit('click', event) // parents can hook JS actions (copy, modal, etc.)
+  if (!props.href || event.defaultPrevented) return
+  if (props.href.startsWith('http')) {
+      window.open(props.href, '_blank', 'noopener,noreferrer')
+  } else if (/^(mailto|tel|#):/.test(props.href)) {
+    window.location.href = props.href // mailto/tel/anchor — plain navigation
+  } else if (router) {
+    router.go(props.href)
+  } else {
+    window.location.href = props.href
+  }
+}
 </script>
 
 <style scoped>
@@ -88,14 +82,6 @@ const downloadProp = computed(() => {
   background: var(--vp-c-text-1, #111);
   color: var(--vp-c-bg, #eee) !important;
   border-color: var(--vp-c-text-1, #111);
-}
-
-.btn-disabled {
-  opacity: 0.45;
-  cursor: default;
-  pointer-events: none;
-  font-style: italic;
-  font-weight: 400;
 }
 
 .btn-arrow {

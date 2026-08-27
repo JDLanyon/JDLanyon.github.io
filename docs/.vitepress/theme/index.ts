@@ -1,5 +1,6 @@
-import DefaultTheme from 'vitepress/theme'
 import './custom.css'
+
+import DefaultTheme from 'vitepress/theme'
 
 // Custom layout wrapper - adds BackToTop button before footer
 import CustomLayout from './Layout.vue'
@@ -14,7 +15,8 @@ import BlogCard from './components/BlogCard.vue'
 import Card from './components/Card.vue'
 import ProjectFullPage from './components/ProjectFullPage.vue'
 import ProjectCard from './components/ProjectCard.vue'
-import ProjectDetailModal from './components/ProjectDetailModal.vue'
+import ProjectModal from './components/ProjectModal.vue'
+import Modal from './components/Modal.vue'
 import YouTubeEmbeds from './components/YouTubeEmbeds.vue'
 
 export default {
@@ -32,7 +34,10 @@ export default {
     app.component('Card', Card)
     app.component('ProjectFullPage', ProjectFullPage)
     app.component('ProjectCard', ProjectCard)
-    app.component('ProjectDetailModal', ProjectDetailModal)
+    app.component('ProjectModal', ProjectModal)
+    app.component('Modal', Modal)
     app.component('YouTubeEmbeds', YouTubeEmbeds)
   },
 }
+
+

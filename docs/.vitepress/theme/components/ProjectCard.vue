@@ -9,21 +9,14 @@
     :ariaLabel="`View details for ${title}`"
     @click="openModal"
   >
-    <GlitchLink
-      v-if="url"
-      :href="url"
-      class="project-card-url"
-      @click.stop
-    >View Live</GlitchLink>
-  </Card>
-
     <!-- Modal instance - one per card, triggered on click -->
-    <ProjectDetailModal
+    <ProjectModal
       v-if="showModal"
       :slug="slug"
       :repo="repo"
       @close="showModal = false"
     />
+  </Card>
 </template>
 
 <script setup lang="ts">

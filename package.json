@@ -6,11 +6,9 @@
     "dev": "vitepress dev docs",
     "fetch-readmes": "node scripts/fetch-readmes.mjs && node scripts/cleanup-auto.mjs",
     "build": "node scripts/fetch-readmes.mjs && vitepress build docs && node scripts/cleanup-auto.mjs",
-    "preview": "vitepress preview docs",
-    "sync:blog": "bash scripts/sync-obsidian.sh",
-    "deploy": "npm run build && npx gh-pages -d docs/.vitepress/dist",
-    "deploy:cf": "node scripts/fetch-readmes.mjs && vitepress build docs && node scripts/cleanup-auto.mjs && npx wrangler pages deploy docs/.vitepress/dist --project-name=jdlanyon-dev",
-    "deploy:gh": "npm run build && npx gh-pages -d docs/.vitepress/dist"
+    "build:pdfs": "bash scripts/build-pdfs.sh",
+    "deploy": "node scripts/fetch-readmes.mjs && vitepress build docs && node scripts/cleanup-auto.mjs && npx wrangler pages deploy docs/.vitepress/dist --project-name=jdlanyon-dev",
+    "preview": "vitepress preview docs"
   },
   "devDependencies": {
     "vitepress": "^1.6.4",
@@ -24,7 +22,7 @@
     }
   },
   "dependencies": {
-    "dotenv": "^17.4.2"
+    "dotenv": "^17.4.2",
+    "lucide-vue-next": "^1.0.0"
   }
 }
-

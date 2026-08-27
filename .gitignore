@@ -26,16 +26,25 @@ dist-ssr
 docs/.obsidian/
 
 # Scripts
-scripts/*.log
+scripts/
 
 # Auto-discovered GitHub readmes (build artifacts)
 docs/.vitepress/cache/auto-projects/
 
 # VitePress cache and distribution folders (build artifacts)
 docs/.vitepress/cache/
+
 # VitePress build output
 docs/.vitepress/dist/
 !docs/.vitepress/dist/JDLanyon_Resume.pdf
+
+# Print styles
+docs/.vitepress/theme/cover-letter-print.css
+docs/.vitepress/theme/resume-print.css
+
+# Cover Letter
+docs/cover-letter.md
+docs/public/JDLanyon_Cover_Letter.pdf
 
 # Environment variables
 .env
@@ -43,3 +52,8 @@ docs/.vitepress/dist/
 # Cloudflare Wrangler
 .wrangler/
 
+# Syncthing
+docs/.stfolder/
+
+# AGENTS
+AGENTS.md

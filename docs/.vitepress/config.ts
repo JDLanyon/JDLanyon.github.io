@@ -33,6 +33,7 @@ export default defineConfig({
       { text: 'Projects', link: '/projects' },
       { text: 'Resume', link: '/resume' },
       { text: 'Blog', link: '/blog/' },
+      { text: 'Contact', link: '/contact' },
     ],
 
     socialLinks: [
